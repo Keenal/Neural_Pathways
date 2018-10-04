@@ -1,3 +1,5 @@
+
+
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -32,6 +34,12 @@ module.exports = (env) => {
                     NODE_ENV: JSON.stringify(isDevBuild ? 'development' : 'production')
                 }
             }),
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+                Popper: ['popper.js', 'default']
+            }),
             new webpack.DllReferencePlugin({
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
@@ -46,6 +54,6 @@ module.exports = (env) => {
             // Plugins that apply in production builds only
             new webpack.optimize.UglifyJsPlugin(),
             new ExtractTextPlugin('site.css')
-        ])
+                ])
     }];
 };
