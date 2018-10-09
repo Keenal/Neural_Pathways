@@ -28,7 +28,7 @@ Obj/
 
 # Visual Studio 2015 cache/options directory
 .vs/
-NeuralPathwaysTemplate/wwwroot/dist/
+NeuralPathways/wwwroot/dist/
 
 /yarn.lock
 
@@ -187,7 +187,7 @@ ClientBin/
 *.publishsettings
 orleans.codegen.cs
 
-NeuralPathwaysTemplate/node_modules
+NeuralPathways/node_modules
 
 # RIA/Silverlight projects
 Generated_Code/

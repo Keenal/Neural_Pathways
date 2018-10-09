@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "NeuralPathwaysTemplate": {
+    "NeuralPathways": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
