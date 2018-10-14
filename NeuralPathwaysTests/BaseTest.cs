@@ -6,7 +6,6 @@ namespace NeuralPathwaysTests
 {
     public class BaseTest
     {
-
         protected readonly string _connection;
         public BaseTest()
         {
