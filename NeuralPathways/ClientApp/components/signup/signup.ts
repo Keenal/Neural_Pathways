@@ -42,17 +42,8 @@ export default class SignUpComponent extends Vue {
                 Role: this.user.role
             }),
             dataType: 'json',
-            success: function (response) {
-
-                alert("Successfully signed up");
-
-                //  if(response){
-                //       window.location.href = "/quiz";
-                //  }
-
-            },
-            error: function (response) {
-                alert("sign up failed");
+            complete: function (response) {
+                window.location.href = "/";
             }
         });
 
