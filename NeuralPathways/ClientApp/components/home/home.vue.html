@@ -5,14 +5,14 @@
             <div id="login">
                 <h2>Log in</h2>
                 <form action="/" method="post">
-                    <h7>Email Address*:</h7>
+                    <h7>Email:</h7>
                     <div class="field-wrap">
                         <label>
                             <span class="req"></span>
                         </label>
                         <input type="email" required autocomplete="off" />
                     </div>
-                    <h7>Password*:</h7>
+                    <h7>Password:</h7>
                     <div class="field-wrap">
                         <label>
                             <span class="req"></span>
@@ -21,7 +21,7 @@
                     </div>
 
 
-                    <a href="/quiz"><button class="button">Log In </button></a>
+                    <button class="button" @click="loginButtonFunction">Log In</button>
 
                         <h7>New user? <a href="/signup">Sign up here!</a></h7>
 
@@ -39,3 +39,4 @@
 
 
 <style src="./home.css"></style>
+<script src="../home/home.ts"></script>
