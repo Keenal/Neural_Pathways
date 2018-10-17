@@ -2,20 +2,18 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
+import { User } from '../../models/user';
 
 @Component
 export default class LoginComponent extends Vue {
 
-    //user = new User();
-
-    userEmail: string = "";
-    userPassword: string = "";
+    user = new User();
 
 
     loginButtonFunction() {
 
-        this.userEmail = (<HTMLInputElement>document.getElementById("userEmail")).value;
-        this.userPassword = (<HTMLInputElement>document.getElementById("userPassword")).value;
+        this.user.email = (<HTMLInputElement>document.getElementById("userEmail")).value;
+        this.user.password = (<HTMLInputElement>document.getElementById("userPassword")).value;
 
 
         $.ajax({
@@ -23,16 +21,20 @@ export default class LoginComponent extends Vue {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
+            url: 'api/User/login',  
             type: "POST",
-            url: 'api/User/login',
             data: JSON.stringify({
-                Email: this.userEmail,
-                Password: this.userPassword
+                Email: this.user.email,
+                Password: this.user.password
             }),
             dataType: 'json',
             success: function (response) {
 
                 alert("Successfully logged in");
+
+              //  if(response){
+             //       window.location.href = "/quiz";
+              //  }
 
             },
             error: function (response) {

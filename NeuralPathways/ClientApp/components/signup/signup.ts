@@ -1,8 +1,8 @@
-﻿/*
+﻿
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
-import { User } from '../../../Models/User';
+import { User } from '../../models/user';
 
 @Component
 export default class SignUpComponent extends Vue {
@@ -21,9 +21,9 @@ export default class SignUpComponent extends Vue {
         if ((<HTMLInputElement>document.getElementById("studentRole")).checked) {
 
             this.user.role = (<HTMLInputElement>document.getElementById("studentRole")).value;
-        } if ((<HTMLInputElement>document.getElementById("administratorRole")).checked) {
+        } if ((<HTMLInputElement>document.getElementById("teacherRole")).checked) {
 
-            this.user.role = (<HTMLInputElement>document.getElementById("administratorRole")).value;
+            this.user.role = (<HTMLInputElement>document.getElementById("teacherRole")).value;
         }
 
 
@@ -42,8 +42,17 @@ export default class SignUpComponent extends Vue {
                 Role: this.user.role
             }),
             dataType: 'json',
-            complete: function (response) {
-                window.location.href = "http://localhost:53352/";
+            success: function (response) {
+
+                alert("Successfully signed up");
+
+                //  if(response){
+                //       window.location.href = "/quiz";
+                //  }
+
+            },
+            error: function (response) {
+                alert("sign up failed");
             }
         });
 
@@ -52,4 +61,3 @@ export default class SignUpComponent extends Vue {
 
 
 }
-*/
