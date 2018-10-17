@@ -1,18 +1,21 @@
-﻿import Vue from 'vue';
+﻿
+import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import $ from 'jquery';
-import { User } from '../../../Models/User';
+import * as $ from "jquery";
 
 @Component
 export default class LoginComponent extends Vue {
 
-    user = new User();
+    //user = new User();
+
+    userEmail: string = "";
+    userPassword: string = "";
 
 
     loginButtonFunction() {
 
-        this.user.email = (<HTMLInputElement>document.getElementById("userEmail")).value;
-        this.user.password = (<HTMLInputElement>document.getElementById("userPassword")).value;
+        this.userEmail = (<HTMLInputElement>document.getElementById("userEmail")).value;
+        this.userPassword = (<HTMLInputElement>document.getElementById("userPassword")).value;
 
 
         $.ajax({
@@ -21,10 +24,10 @@ export default class LoginComponent extends Vue {
                 'Content-Type': 'application/json'
             },
             type: "POST",
-            url: 'api/User/Login',
+            url: 'api/User/login',
             data: JSON.stringify({
-                Email: this.user.email,
-                Password: this.user.password
+                Email: this.userEmail,
+                Password: this.userPassword
             }),
             dataType: 'json',
             success: function (response) {
@@ -35,6 +38,7 @@ export default class LoginComponent extends Vue {
             error: function (response) {
                 alert("Login failed");
             }
+            
         });
 
 

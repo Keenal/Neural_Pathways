@@ -1,4 +1,5 @@
-﻿import Vue from 'vue';
+﻿/*
+import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
 import { User } from '../../../Models/User';
@@ -51,3 +52,4 @@ export default class SignUpComponent extends Vue {
 
 
 }
+*/

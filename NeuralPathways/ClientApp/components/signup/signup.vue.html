@@ -4,34 +4,34 @@
         <div class="form">
             <div id="login">
                 <h2>Sign up</h2>
-                <form action="/" method="post">
+                <form action="/">
                     <h7>First Name*:</h7>
                     <div class="field-wrap">
                         <label>
                             <span class="req"></span>
                         </label>
-                        <input type="email" required autocomplete="off" />
+                        <input type="text" id="firstName" required autocomplete="off" />
                     </div>
                     <h7>Last Name*:</h7>
                     <div class="field-wrap">
                         <label>
                             <span class="req"></span>
                         </label>
-                        <input type="email" required autocomplete="off" />
+                        <input type="text" id="lastName" required autocomplete="off" />
                     </div>
-                    <h7>Email Address*:</h7>
+                    <h7>Email*:</h7>
                     <div class="field-wrap">
                         <label>
                             <span class="req"></span>
                         </label>
-                        <input type="email" required autocomplete="off" />
+                        <input type="email" id="userEmail" required autocomplete="off" />
                     </div>
                     <h7>Password*:</h7>
                     <div class="field-wrap">
                         <label>
                             <span class="req"></span>
                         </label>
-                        <input type="password" required autocomplete="off" />
+                        <input type="password" id="userPassword" required autocomplete="off" />
                     </div>
 
                     <h7>Role*:</h7>
@@ -40,7 +40,7 @@
                             <span class="req"></span>
                         </label>
                         <label><h6>Student</h6></label>
-                        <input type="radio" name="drone" value="huey" checked /><br>
+                        <input type="radio" name="drone" id="role" value="huey" checked /><br>
 
                         <label><h6>Administrator</h6></label>
                         <div class="radio">
@@ -61,9 +61,5 @@
     </div>
 </template>
 
-
-
-
-
 <style src="./signup.css"></style>
-<script scr="./signup.ts"></script>
+<!--<script scr="./signup.ts"></script>-->
