@@ -10,10 +10,6 @@
     max-width: 470px;
 }
 
-body {
-    background-color: lightgray;
-}
-
 blockquote {
     position: relative;
     left: 50px;
@@ -30,11 +26,19 @@ footer {
     left: 80px;
 }
 
-li {
+body {
+    background-color: lightgray;
+}
+
+#list1 {
     position: relative;
     right: 250px;
 }
 
-a {
+#qa {
+    color: darkorange;
+}
+
+#rep {
     color: darkorange;
 }
