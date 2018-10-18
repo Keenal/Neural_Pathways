@@ -1,10 +1,12 @@
 #wel {
     color: steelblue;
+    position: relative;
+    left: 120px;
 }
 
 #im1 {
     position: relative;
-    left: 30px;
+    left: 130px;
     bottom: 65px;
     max-height: 800px;
     max-width: 470px;
@@ -12,7 +14,7 @@
 
 blockquote {
     position: relative;
-    left: 50px;
+    left: 160px;
     bottom: 50px;
 }
 
@@ -23,7 +25,7 @@ footer {
 #admin {
     font-size: 1.8em;
     position: relative;
-    left: 80px;
+    left: 200px;
 }
 
 body {
@@ -32,7 +34,7 @@ body {
 
 #list1 {
     position: relative;
-    right: 250px;
+    right: 150px;
 }
 
 #qa {
