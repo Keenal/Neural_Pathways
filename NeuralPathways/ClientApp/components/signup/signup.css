@@ -37,7 +37,7 @@ a {
     box-shadow: 0 4px 10px 4px #13232f;
 }
 
-h7 {
+h7, h6 {
     color: black;
 }
 
@@ -140,3 +140,7 @@ input, textarea {
     text-align: right;
 }
 
+.radio {
+
+margin: -5px;
+}

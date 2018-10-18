@@ -26,6 +26,7 @@ export default class SignUpComponent extends Vue {
             this.user.role = (<HTMLInputElement>document.getElementById("teacherRole")).value;
         }
 
+        
 
         $.ajax({
             headers: {
@@ -42,8 +43,12 @@ export default class SignUpComponent extends Vue {
                 Role: this.user.role
             }),
             dataType: 'json',
-            complete: function (response) {
+            success: function (response) {
+                alert("works");
                 window.location.href = "/";
+            },
+            error: function (response) {
+                alert("sign up failed");
             }
         });
 

@@ -29,16 +29,11 @@ export default class LoginComponent extends Vue {
             }),
             dataType: 'json',
             success: function (response) {
-
-                alert("Successfully logged in");
-
-              //  if(response){
-             //       window.location.href = "/quiz";
-              //  }
-
+                alert("works");
+                window.location.href = "/quiz";
             },
             error: function (response) {
-                alert("Login failed");
+                alert("log in failed");
             }
             
         });
