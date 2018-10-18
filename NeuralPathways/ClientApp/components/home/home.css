@@ -1,0 +1,141 @@
+﻿.center {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 10px 70px 0px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+body {
+    background-image: url("../../../wwwroot/images/bg.jpg");
+    font-family: Sylfaen;
+}
+
+a {
+    text-decoration: none;
+    color: #5f5e5e;
+    transition: .5s ease;
+}
+
+.form {
+    background: #f26514;
+    padding: 20px 20px 10px;
+    max-width: 300px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px #13232f;
+}
+
+h7 {
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: #2f81e8;
+    font-weight: 300;
+    margin: 0 0 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+label {
+    position: absolute;
+    transform: translateY(6px);
+    left: 10px;
+    color: white;
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 12px;
+
+{
+    margin: 2px;
+    color: #2f81e6;
+}
+
+}
+
+label.active {
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+
+label.highlight {
+    color: white;
+}
+
+input, textarea {
+    font-size: 25px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px 3px;
+    background: none;
+    background-image: none;
+    border: 1px solid #010100;
+    color: white;
+    border-radius: 1rem;
+}
+
+
+.field-wrap {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.top-row {
+    &:after
+
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+. div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    &:last-child
+
+{
+    margin: 0;
+}
+
+}
+}
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 32px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #2f81e6;
+    color: white;
+    transition: all.5s ease;
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
