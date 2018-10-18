@@ -1,0 +1,46 @@
+#wel {
+    color: steelblue;
+    position: relative;
+    left: 120px;
+}
+
+#im1 {
+    position: relative;
+    left: 130px;
+    bottom: 65px;
+    max-height: 800px;
+    max-width: 470px;
+}
+
+blockquote {
+    position: relative;
+    left: 160px;
+    bottom: 50px;
+}
+
+footer {
+    color: darkorange;
+}
+
+#admin {
+    font-size: 1.8em;
+    position: relative;
+    left: 200px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+#list1 {
+    position: relative;
+    right: 150px;
+}
+
+#qa {
+    color: darkorange;
+}
+
+#rep {
+    color: darkorange;
+}
