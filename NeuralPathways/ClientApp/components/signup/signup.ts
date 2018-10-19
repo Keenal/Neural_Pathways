@@ -40,8 +40,14 @@ export default class SignUpComponent extends Vue {
                 role: this.user.role
             }),
             dataType: 'json',
-            complete: function (response) {
+            success: function (response) {
+
+                // alert("Welcome to TUTORized");
                 window.location.href = "/";
+
+            },
+            error: function (response) {
+                alert("Login failed :(");
             }
 
         });
