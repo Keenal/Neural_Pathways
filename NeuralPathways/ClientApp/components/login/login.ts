@@ -1,7 +1,7 @@
 ﻿import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
-import { User } from '../../../models/user';
+import { User } from '../../models/user';
 
 @Component
 export default class LoginComponent extends Vue {
@@ -29,12 +29,12 @@ export default class LoginComponent extends Vue {
             dataType: 'json',
             success: function (response) {
 
-                alert("Welcome to TUTORized");
-                //window.location.href = "http://localhost:53352/";
+               // alert("Welcome to TUTORized");
+                window.location.href = "/quiz";
 
             },
             error: function (response) {
-                alert("Login failed, please check you email or password");
+                alert("Login failed :(");
             }
 
         });

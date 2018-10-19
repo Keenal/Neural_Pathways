@@ -1,1 +1,0 @@
-﻿let userEmail = document.getElementById("userSignUpScreen").innerHTML;

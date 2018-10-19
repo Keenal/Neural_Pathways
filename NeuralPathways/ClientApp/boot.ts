@@ -6,8 +6,9 @@ import Component from '../node_modules/vue-class-component';
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: require('./components/home/login/login.vue.html') },
-    { path: '/signup', component: require('./components/home/signup/signup.vue.html') },
+    { path: '/', component: require('./components/login/login.vue.html') },
+    { path: '/signup', component: require('./components/signup/signup.vue.html') },
+    { path: '/quiz', component: require('./components/quiz/quiz.vue.html') }
 ];
 
 new Vue({

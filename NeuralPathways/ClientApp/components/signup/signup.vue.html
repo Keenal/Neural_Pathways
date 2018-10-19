@@ -1,65 +1,36 @@
 ﻿<template>
     <div>
-        <!--<img src="../../../wwwroot/images/logo.png" alt="logo" class="center">-->
-        <div class="form">
-            <div id="login">
-                <h2>Sign up</h2>
-                <form action="/">
-                    <h7>First Name*:</h7>
-                    <div class="field-wrap">
-                        <label>
-                            <span class="req"></span>
-                        </label>
-                        <input type="text" id="firstName" required autocomplete="off" />
-                    </div>
-                    <h7>Last Name*:</h7>
-                    <div class="field-wrap">
-                        <label>
-                            <span class="req"></span>
-                        </label>
-                        <input type="text" id="lastName" required autocomplete="off" />
-                    </div>
-                    <h7>Email*:</h7>
-                    <div class="field-wrap">
-                        <label>
-                            <span class="req"></span>
-                        </label>
-                        <input type="email" id="userEmail" required autocomplete="off" />
-                    </div>
-                    <h7>Password*:</h7>
-                    <div class="field-wrap">
-                        <label>
-                            <span class="req"></span>
-                        </label>
-                        <input type="password" id="userPassword" required autocomplete="off" />
-                    </div>
 
-                    <h7>Role*:</h7>
-                    <div class="field-wrap">
-                        <label>
-                            <span class="req"></span>
-                        </label>
-                        <label><h6>Student</h6></label>
-                        <div class="radio">
-                            <input type="radio" name="student" id="studentRole" value="student" checked /><br>
-                        </div>
+        <h1>Sign Up!</h1><br />
+       
+        <div class="userInfo">
+            <strong>
+                <p>
+                    First Name: <input id="firstName" type="text" />
+                    Last Name: <input id="lastName" type="text" />
+                </p>
 
-                        <label><h6>Teacher</h6></label>
-                        <div class="radio">
-                            <input type="radio" id="teacherRole" name="teacher" value="teacher" />
-                        </div>
-                    </div>
+                <p> Email: <br /><input id="userEmail" type="email"></p>
 
+                <p> Password: <input id="userPassword" type="password"></p>
 
-                    <button class="button" @click="signUpFunction">Sign up</button>
-                </form>
+                <p>
+                    I am a :
+                    <input id="studentRole" type="radio" name="role" value="student"> Student &#160
+                    <input id="teacherRole" type="radio" name="role" value="teacher"> Teacher
+                </p>
+                <p><button @click="signUpFunction">Sign up!</button></p>
+            </strong>
 
-            </div>
-
+            <p>
+                Already have an account? Login
+                <a href="/"> <strong>here!</strong></a>
+            </p>
         </div>
-
     </div>
 </template>
 
-<style src="./signup.css"></style>
-<script scr="./signup.ts"></script>
+
+
+
+<script src="./signup.ts"></script>

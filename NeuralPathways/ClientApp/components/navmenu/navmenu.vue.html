@@ -1,42 +1,11 @@
 ﻿<template>
-    <div class="main-nav">
-        <div class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">TUTORized</a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <router-link to="/calendar">
-                            Calendar
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/scheduleappointment">
-                            Schedule Appointment
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/message">
-                            Message
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/history">
-                            History
-                        </router-link>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <div>
+        <ul>
+            <li><a href="/"><img src="../../../wwwroot/images/loginIcon.png"><br />Log in</a></li>
+            <li><a href="/signup"><img src="../../../wwwroot/images/signupIcon.png"><br />Sign up</a></li>
+            <li><a href="/quiz"><img src="../../../wwwroot/images/quizIcon.png"><br />Quiz</a></li>
+        </ul>
     </div>
 </template>
 
-<style src="./navmenu.css" />
+<style src="./navmenu.css" ></style>

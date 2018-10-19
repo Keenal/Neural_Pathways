@@ -3,7 +3,7 @@
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -24,7 +24,7 @@ hr {
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
+    background-color: #ff6a00;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -35,8 +35,16 @@ button {
 }
 
     button:hover {
-        opacity: 1;
+        opacity: 2;
     }
+h1 {
+    color: #007bff;
+    font-family: Georgia;
+}
+p {
+
+color: white;
+}
 
 /* Extra styles for the cancel button */
 .cancelbtn {
@@ -61,6 +69,8 @@ button {
     clear: both;
     display: table;
 }
+
+
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
