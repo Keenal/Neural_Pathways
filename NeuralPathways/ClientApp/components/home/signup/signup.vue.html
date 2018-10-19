@@ -1,0 +1,29 @@
+﻿<template>
+    <div class="mainSignUpScreen">
+        <h1>Sign up</h1>
+        <p>
+            Already have an account?
+            <a href="/"> <strong>Login Here</strong></a>
+        </p>
+        <div class="userInfo">
+            <strong>
+                <p>
+                    First Name: <input id="firstName" type="text" />
+                    Last Name: <input id="lastName" type="text" />
+                </p>
+
+                <p> Email: <input id="userEmail" type="email"></p>
+
+                <p> Password: <input id="userPassword" type="password"></p>
+
+                <p>
+                    I am a :
+                    <input id="studentRole" type="radio" name="role" value="student"> Student &#160
+                    <input id="teacherRole" type="radio" name="role" value="teacher"> Teacher
+                </p>
+                <p><button @click="signUpFunction">Sign up!</button></p>
+            </strong>
+        </div>
+    </div>
+</template>
+<script src="./signup.ts"></script>

@@ -1,14 +1,12 @@
-﻿
-import Vue from 'vue';
+﻿import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
-import { User } from '../../models/user';
+import { User } from '../../../models/user';
 
 @Component
 export default class LoginComponent extends Vue {
 
     user = new User();
-
 
     loginButtonFunction() {
 
@@ -21,21 +19,24 @@ export default class LoginComponent extends Vue {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            url: 'api/User/login',  
-            type: "POST",
+            url: 'api/User/login',
+            type: 'POST',
             data: JSON.stringify({
-                Email: this.user.email,
-                Password: this.user.password
+                email: this.user.email,
+                password: this.user.password
+
             }),
             dataType: 'json',
             success: function (response) {
-                alert("works");
-                window.location.href = "/quiz";
+
+                alert("Welcome to TUTORized");
+                //window.location.href = "http://localhost:53352/";
+
             },
             error: function (response) {
-                alert("log in failed");
+                alert("Login failed, please check you email or password");
             }
-            
+
         });
 
 

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@types/jquery": "^3.3.19"
+    "@types/jquery": "^3.3.21"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.13.0",
