@@ -1,7 +1,7 @@
 {
-  "name": "NeuralPathways",
-  "private": true,
-  "version": "0.0.0",
+  "dependencies": {
+    "@types/jquery": "^3.3.21"
+  },
   "devDependencies": {
     "@types/webpack-env": "^1.13.0",
     "aspnet-webpack": "^2.0.1",
@@ -12,7 +12,6 @@
     "extract-text-webpack-plugin": "^2.0.0-rc",
     "file-loader": "^0.9.0",
     "isomorphic-fetch": "^2.2.1",
-    "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
     "style-loader": "^0.13.1",
     "typescript": "^2.2.1",
@@ -23,6 +22,10 @@
     "vue-router": "^2.3.0",
     "vue-template-compiler": "^2.2.2",
     "webpack": "^2.2.0",
-    "webpack-hot-middleware": "^2.12.2"
-  }
+    "webpack-hot-middleware": "^2.12.2",
+    "jquery": "^3.3.1"
+  },
+  "name": "NeuralPathways",
+  "private": true,
+  "version": "0.0.0"
 }

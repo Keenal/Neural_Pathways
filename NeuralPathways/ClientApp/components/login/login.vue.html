@@ -1,0 +1,26 @@
+﻿<template>
+    <div class="mainSignUpScreen">
+        <h1>Log In!</h1><br />
+
+        <strong>
+            <p>
+                Email:<br />
+                <input type="email" name="femail" id="userEmail" ><br>
+            </p>
+            <p>
+                Password:
+                <input type="password" name="fpassword" id="userPassword" ><br>
+            </p>
+            <button @click="loginButtonFunction">Login</button>
+
+        </strong>
+
+        <p>
+            Don't have an account? Sign up
+            <a href="/signup"> <strong>here!</strong></a>
+        </p>
+    </div>
+</template>
+
+<style src="./login.css"></style>
+<script src="./login.ts"></script>
