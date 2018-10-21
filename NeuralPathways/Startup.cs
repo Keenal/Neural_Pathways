@@ -30,6 +30,10 @@ namespace NeuralPathways
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IUserRepository>(provider =>
                 new UserRepository(Configuration.GetConnectionString("tma")));
+
+            services.AddSingleton<ITeacherService, TeacherService>();
+            services.AddSingleton<ITeacherRepository>(provider =>
+                new TeacherRepository(Configuration.GetConnectionString("tma")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
