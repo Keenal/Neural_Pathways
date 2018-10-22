@@ -41,8 +41,6 @@ export default class SignUpComponent extends Vue {
             }),
             dataType: 'json',
             success: function (response) {
-
-                // alert("Welcome to TUTORized");
                 window.location.href = "/";
 
             },
