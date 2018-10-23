@@ -23,7 +23,7 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
+#button {
     background-color: #ff6a00;
     color: white;
     padding: 14px 20px;

@@ -1,20 +1,22 @@
 #wel {
+    text-align: center;
     color: steelblue;
     position: relative;
-    left: 120px;
 }
 
 #im1 {
     position: relative;
-    left: 130px;
     bottom: 65px;
     max-height: 800px;
     max-width: 470px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 blockquote {
     position: relative;
-    left: 160px;
+    text-align: center;
     bottom: 50px;
 }
 
@@ -23,18 +25,14 @@ footer {
 }
 
 #admin {
+    text-align: center;
     font-size: 1.8em;
     position: relative;
-    left: 200px;
-}
-
-body {
-    background-color: lightgray;
 }
 
 #list1 {
     position: relative;
-    right: 150px;
+    right: -100px;
 }
 
 #qa {
