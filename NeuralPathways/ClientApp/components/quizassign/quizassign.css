@@ -9,31 +9,38 @@
 #label1 {
     position: relative;
     color: dodgerblue;
-    bottom: 40px;
+    bottom: 29px;
     left: 300px;
     font-size: 1.0em;
 }
 
 #label2 {
     position: relative;
+    color: dodgerblue;
     left: 700px;
-    bottom: 40px;
+    bottom: 28px;
     font-size: 1.0em;
 }
 
 #checkboxes1 {
     position: relative;
     left: 300px;
-    bottom: 20px;
+    bottom: 11px;
     -webkit-appearance: checkbox;
     background: #f26514;
     border-radius: 4px;
 }
 
+#boxes {
+    position: relative;
+    box-shadow: 2px 5px darkgray;
+    bottom: 5px;
+}
+
 #checkboxes2 {
     position: relative;
     left: 765px;
-    bottom: 33px;
+    bottom: 22px;
     -webkit-appearance: checkbox;
     background: #f26514;
     border-radius: 4px;
@@ -43,7 +50,7 @@
     position: relative;
     color: black;
     font-size: .8em;
-    bottom: 15px;
+    bottom: 27px;
     left: 20px;
     width: 140px;
     display: inline-block;
@@ -68,6 +75,9 @@
 
 #btn1 {
     position: relative;
+    color: dodgerblue;
+    background-color: lightgray;
+    box-shadow: 4px 8px darkgray;
     left: 540px;
     margin: 0px auto;
 }

@@ -29,6 +29,7 @@ function populateStudents() {
             checkbox.type = "checkbox";
             checkbox.name = "fromServerSide[]";
             checkbox.value = pair;
+            checkbox.id = "boxes"
             text.id = "txt";
 
             text.appendChild(checkbox);
@@ -55,6 +56,7 @@ function populateQuizzes() {
             checkbox.type = "checkbox";
             checkbox.name = "fromServerSide[]";  
             checkbox.value = pair;
+            checkbox.id = "boxes"
             text.id = "txt";
 
             text.appendChild(checkbox);
