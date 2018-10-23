@@ -1,0 +1,22 @@
+﻿#list3 {
+    position: relative;
+    left: 50px;
+    bottom: 135px;
+    width: 150px;
+}
+
+#reports {
+    text-align: center;
+    position: relative;
+    bottom: 55px;
+    color: white;
+}
+
+#img3 {
+    position: relative;
+    bottom: 90px;
+    left: 30px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}

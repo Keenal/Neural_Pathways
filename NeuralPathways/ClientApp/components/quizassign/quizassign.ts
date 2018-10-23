@@ -1,73 +1,93 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-//import $ from 'jquery'import { User } from '../../models/user';
-//import $ from 'jquery'import { TeacherController } from '../../controllers/TeacherController';
+import { User } from '../../models/User';
+import $ from 'jquery'
 
-// Learn jquery and do I have the correct npm installs to work with json/jquery?????
-window.onload = function() {
-    populateStudents();
-    populateQuizzes();
-}
-
+@Component
+export default class QuizAssignmentComponent extends Vue {
+    studentArray = ["Mike Pitts", "Justin Froth", "Phillis Smith", "Hank Dill", "Susy Jam", "Bob Fierce", "Justin Time"];
+    quizArray = ["Quiz 001", "Quiz 002", "Quiz 003", "Quiz 004"];
 // Just need to figure out how to fill these arrays from serverside?
-var studentArray = ["Mike Pitts", "Justin Froth", "Phillis Smith", "Hank Dill", "Susy Jam", "Bob Fierce", "Justin Time"];
-var quizArray = ["Quiz 001", "Quiz 002", "Quiz 003", "Quiz 004"];
 
+    constructor() {
+        super();
+        window.onload = () => {
+            this.populateStudents();
+            this.populateQuizzes();
+        };
 
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: 'api/Teacher/GetListOfAllStudents',
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({
+                "Students": this.studentArray
+            }),
+            success: function (response) {
+                window.location.href = "http://localhost:65506/";
+            },
+        });
+    }
 
-function populateStudents() {
-    for (var student in studentArray) {
-        if (studentArray.hasOwnProperty(student)) {
+    populateStudents() {
+        for (var student in this.studentArray) {
+            if (this.studentArray.hasOwnProperty(student)) {
 
-            var pair = studentArray[student];
+                var pair = this.studentArray[student];
 
-            var text = document.createElement("text");
-            var br = document.createElement("br");
-            var description = document.createTextNode(pair);
-            var checkbox = document.createElement("input");
+                var text = document.createElement("text");
+                var br = document.createElement("br");
+                var description = document.createTextNode(pair);
+                var checkbox = document.createElement("input");
 
-            checkbox.type = "checkbox";
-            checkbox.name = "fromServerSide[]";
-            checkbox.value = pair;
-            checkbox.id = "boxes"
-            text.id = "txt";
+                checkbox.type = "checkbox";
+                checkbox.name = "fromServerSide[]";
+                checkbox.value = pair;
+                checkbox.id = "boxes"
+                text.id = "txt";
 
-            text.appendChild(checkbox);
-            text.appendChild(description);
+                text.appendChild(checkbox);
+                text.appendChild(description);
 
-            (<HTMLInputElement>document.getElementById('checkboxes1')).appendChild(checkbox);
-            (<HTMLInputElement>document.getElementById('checkboxes1')).appendChild(text);
-            (<HTMLInputElement>document.getElementById('checkboxes1')).appendChild(br);
+                (<HTMLInputElement>document.getElementById('checkboxes1')).appendChild(checkbox);
+                (<HTMLInputElement>document.getElementById('checkboxes1')).appendChild(text);
+                (<HTMLInputElement>document.getElementById('checkboxes1')).appendChild(br);
+            }
+        }
+    }
+
+    populateQuizzes() {
+        for (var quiz in this.quizArray) {
+            if (this.quizArray.hasOwnProperty(quiz)) {
+
+                var pair = this.quizArray[quiz];
+
+                var text = document.createElement("text");
+                var br = document.createElement("br");
+                var description = document.createTextNode(pair);
+                var checkbox = document.createElement("input");
+
+                checkbox.type = "checkbox";
+                checkbox.name = "fromServerSide[]";
+                checkbox.value = pair;
+                checkbox.id = "boxes"
+                text.id = "txt";
+
+                text.appendChild(checkbox);
+                text.appendChild(description);
+
+                (<HTMLInputElement>document.getElementById('checkboxes2')).appendChild(checkbox);
+                (<HTMLInputElement>document.getElementById('checkboxes2')).appendChild(text);
+                (<HTMLInputElement>document.getElementById('checkboxes2')).appendChild(br);
+            }
         }
     }
 }
 
-function populateQuizzes() {
-    for (var quiz in quizArray) {
-        if (quizArray.hasOwnProperty(quiz)) {
-
-            var pair = quizArray[quiz];
-
-            var text = document.createElement("text");
-            var br = document.createElement("br");
-            var description = document.createTextNode(pair);
-            var checkbox = document.createElement("input");
-
-            checkbox.type = "checkbox";
-            checkbox.name = "fromServerSide[]";  
-            checkbox.value = pair;
-            checkbox.id = "boxes"
-            text.id = "txt";
-
-            text.appendChild(checkbox);
-            text.appendChild(description);
-
-            (<HTMLInputElement>document.getElementById('checkboxes2')).appendChild(checkbox);
-            (<HTMLInputElement>document.getElementById('checkboxes2')).appendChild(text);
-            (<HTMLInputElement>document.getElementById('checkboxes2')).appendChild(br);
-        }
-    }
-};
 
 /*$.ajax({
 
