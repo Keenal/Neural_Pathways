@@ -26,6 +26,15 @@ namespace NeuralPathways.Service
             return await _teacherRepository.GetEntireStudentListAsync();
         }
 
+        public async Task<Quiz> AssignStudentQuizAsync(User user)
+        {
+            var quiz = CreateQuiz();
+            var studentId = user.Id;
+            quiz.AssignedStudentsId = studentId;
+
+            return await _teacherRepository.AssignStudentQuizAsync(quiz);
+        }
+
         public Quiz CreateQuiz()
         {
             var quiz = new Quiz

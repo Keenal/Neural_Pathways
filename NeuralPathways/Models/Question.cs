@@ -7,7 +7,7 @@ namespace NeuralPathways.Models
 {
     public class Question
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public int QuestionVariableA { get; set; }
         public int QuestionVariableB { get; set; }
         public int QuestionVariableC { get; set; }

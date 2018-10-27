@@ -11,5 +11,7 @@ namespace NeuralPathways.Repository.Abstract
         Task<User> GetStudentByEmailAsync(string email);
 
         Task<IEnumerable<User>> GetEntireStudentListAsync();
+
+        Task<Quiz> AssignStudentQuizAsync(Quiz quiz);
     }
 }
