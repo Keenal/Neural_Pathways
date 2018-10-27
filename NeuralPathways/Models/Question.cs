@@ -7,20 +7,19 @@ namespace NeuralPathways.Models
 {
     public class Question
     {
-        public int EquationVariableA { get; set; }
-        public int EquationVariableB { get; set; }
-        public int EquationVariableC { get; set; }
-        public int EquationVariableD { get; set; }
-        public int EquationVariableE { get; set; }
-        public int EquationVariableF { get; set; }
-        public int EquationVariableG { get; set; }
-        public int EquationVariableH { get; set; }
-        public int EquationVariableI { get; set; }
-        public int EquationVariableJ { get; set; }
-        public int EquationVariableK { get; set; }
-        public int EquationVariableL { get; set; }
-        public int EquationVariableM { get; set; }
-
-
+        public int Id { get; set; }
+        public int QuestionVariableA { get; set; }
+        public int QuestionVariableB { get; set; }
+        public int QuestionVariableC { get; set; }
+        public int QuestionVariableD { get; set; }
+        public string QuestionVariableE { get; set; }
+        public int QuestionVariableF { get; set; }
+        public int QuestionVariableG { get; set; }
+        public int QuestionVariableH { get; set; }
+        public int QuestionVariableI { get; set; }
+        public int QuestionVariableJ { get; set; }
+        public int QuestionVariableK { get; set; }
+        public int QuestionVariableL { get; set; }
+        public int QuestionVariableM { get; set; }
     }
 }
