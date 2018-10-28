@@ -1,32 +1,30 @@
 ﻿<template>
-    <div>
-
-        <h1>Sign Up!</h1><br />
-       
-        <div class="userInfo">
+    <div class="signupUI">
+        <h1 class="signupTitle">Sign Up!</h1><br />
+  
             <strong>
-                <p>
-                    First Name: <input id="firstName" type="text" />
-                    Last Name: <input id="lastName" type="text" />
-                </p>
+                <p class="signupP">
+                    First Name: <input class="signupInput" id="firstName" type="text" />
+                    Last Name: <input class="signupInput" id="lastName" type="text" />
+              
 
-                <p> Email: <br /><input id="userEmail" type="email"></p>
+                 Email: <input class="signupInput" id="userEmail" type="email">
 
-                <p> Password: <input id="userPassword" type="password"></p>
+                 Password: <input class="signupInput" id="userPassword" type="password">
 
-                <p>
+                
                     I am a :
-                    <input id="studentRole" type="radio" name="role" value="student"> Student &#160
-                    <input id="teacherRole" type="radio" name="role" value="teacher"> Teacher
-                </p>
-                <p><button @click="signUpFunction">Sign up!</button></p>
+                    <input class="signupInput" id="studentRole" type="radio" name="role" value="student"> Student &#160
+                    <input class="signupInput" id="teacherRole" type="radio" name="role" value="teacher"> Teacher
+                
+                <button class="signupButton" @click="signUpFunction">Sign up!</button></p>
             </strong>
 
-            <p>
+            <p class="signupP">
                 Already have an account? Login
                 <a href="/"> <strong>here!</strong></a>
             </p>
-        </div>
+
     </div>
 </template>
 
@@ -34,3 +32,4 @@
 
 
 <script src="./signup.ts"></script>
+<style src="./signup.css"></style>
