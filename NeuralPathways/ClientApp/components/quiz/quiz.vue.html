@@ -1,17 +1,47 @@
 ﻿<template>
-    <div class="quiz">
-        <div id="quiz">
-            <h1 id="quiz-name"></h1>
-            <button id="submit-button">Submit Answers</button>
-            <button id="next-question-button">Next Question</button>
-            <button id="prev-question-button">Previous</button>
+    <div class="quizUI">
 
-            <div id="quiz-results">
-                <p id="quiz-results-message"></p>
-                <p id="quiz-results-score"></p>
-            </div>
-        </div>
-        </div>
+        <table class="menuTable">
+            <tbody>
+                <tr class ="menuTableLink">
+                    <td><a href="/">Quizzes</a></td>
+                    <td><a href="/">Scores</a></td>
+                    <td><a href="/">History</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="quizTable">
+            <thead>
+                <tr>
+                    <th colspan="2">Question will go here</th>
+                </tr>
+            </thead>
+           
+            <tbody>
+                <tr>
+                    <td>
+                        <input class="quizInput" type="radio" name="quizChoice" value="Ans1" id="Ans1"> Ans1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="quizInput" type="radio" name="quizChoice" value="Ans2" id="Ans2"> Ans2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="quizInput" type="radio" name="quizChoice" value="Ans3" id="Ans3"> Ans3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="quizInput" type="radio" name="quizChoice" value="Ans4" id="Ans4"> Ans4
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
-<script src="../quiz/quiz.css"></script>
+<style src="./quiz.css"></style>
