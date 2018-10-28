@@ -12,6 +12,8 @@ export default class LoginComponent extends Vue {
 
         this.user.email = (<HTMLInputElement>document.getElementById("userEmail")).value;
         this.user.password = (<HTMLInputElement>document.getElementById("userPassword")).value;
+       // this.user.role = $(".role:checked").val();
+
 
 
         $.ajax({
@@ -23,14 +25,24 @@ export default class LoginComponent extends Vue {
             type: 'POST',
             data: JSON.stringify({
                 email: this.user.email,
-                password: this.user.password
+                password: this.user.password,
+               // role: this.user.role
 
             }),
             dataType: 'json',
             success: function (response) {
 
-               // alert("Welcome to TUTORized");
+                //if (response.role = 'student')
+                //{
+                //    window.location.href = "/quiz";
+                //}
+
+                //if (response.role = 'teacher') {
+                //    window.location.href = "/adminmain";
+                //}
+
                 window.location.href = "/quiz";
+                
 
             },
             error: function (response) {
@@ -42,5 +54,6 @@ export default class LoginComponent extends Vue {
 
     }
 
+  
 
 }

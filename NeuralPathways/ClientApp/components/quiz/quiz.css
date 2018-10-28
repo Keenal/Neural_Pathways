@@ -1,0 +1,50 @@
+﻿table.quizTable {
+    border: 5px solid #ff6a00;
+    background-color: #007bff;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 10%;
+    font-family: Sylfaen;
+}
+
+    table.quizTable th {
+        border: 1px solid #AAAAAA;
+        padding: 20px 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    table.quizTable td {
+        border: 1px solid #AAAAAA;
+        padding: 20px 20px;
+        text-align: center;
+        font-size: 20px;
+        background-color: #EEEEEE;
+    }
+
+table.menuTable {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Calisto MT';
+    font-size: 24px;
+    
+}
+    table.menuTable td {
+        padding: 10px 5px;
+        text-align: center;
+    }
+
+
+    table.menuTable a {
+        color: #ff6a00;
+    }
+
+
+
+
+
+
+
+
