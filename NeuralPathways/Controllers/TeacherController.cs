@@ -26,5 +26,11 @@ namespace NeuralPathways.Controllers
             var listOfTutors = _teacherService.ListOfStudentsGetAsync();
             return (IEnumerable<User>)listOfTutors;
         }
+
+        [HttpPost("assignStudentQuiz")]
+        public async Task<IActionResult> AssignStudentQuizAsync([FromBody] User user)
+        {
+            return Ok(await _teacherService.AssignStudentQuizAsync(user));
+        }
     }
 }

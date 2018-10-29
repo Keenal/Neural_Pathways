@@ -9,5 +9,7 @@ namespace NeuralPathways.Service.Abstract
     public interface ITeacherService
     {
         Task<IEnumerable<User>> ListOfStudentsGetAsync();
+
+        Task<Quiz> AssignStudentQuizAsync(User user);
     }
 }
