@@ -3,34 +3,44 @@ import { Component } from 'vue-property-decorator';
 import { User } from '../../models/User';
 import $ from 'jquery'
 
+// Learn jquery and do I have the correct npm installs to work with json/jquery?????
+
+
 @Component
-export default class QuizAssignmentComponent extends Vue {
-    studentArray = ["Mike Pitts", "Justin Froth", "Phillis Smith", "Hank Dill", "Susy Jam", "Bob Fierce", "Justin Time"];
+export default class SignUpComponent extends Vue {
+    studentArray = new Array();
     quizArray = ["Quiz 001", "Quiz 002", "Quiz 003", "Quiz 004"];
+
 // Just need to figure out how to fill these arrays from serverside?
 
     constructor() {
         super();
+        this.studentArray = ["Mike Pitts", "Justin Froth", "Phillis Smith", "Hank Dill", "Susy Jam", "Bob Fierce", "Justin Time"];
+
+        //**************************************
+        var apiUrl = 'api/Teacher';
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(apiUrl)
+                .done(function (data) {
+                    // On success, 'data' contains a list of students.
+                    $.each(data, function (key, item) {
+                        // Add student names to array.
+                        $('<li>', { text: formatItem(item) }).appendTo($('#students'));
+                        // just for test but not working still
+                    });
+                });
+        }); 
+        //************************************** Array not being populated.  Dont know if I'm even accessing the array from teacherController
+        function formatItem(item: any) {
+            return item.FirstName + ': $' + item.LastName;
+        }
+        // get rid of function when test success
+
         window.onload = () => {
             this.populateStudents();
             this.populateQuizzes();
         };
-
-        $.ajax({
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            url: 'api/Teacher/GetListOfAllStudents',
-            type: 'POST',
-            dataType: 'json',
-            data: JSON.stringify({
-                "Students": this.studentArray
-            }),
-            success: function (response) {
-                window.location.href = "http://localhost:65506/";
-            },
-        });
     }
 
     populateStudents() {
@@ -88,8 +98,22 @@ export default class QuizAssignmentComponent extends Vue {
     }
 }
 
+/*
 
-/*$.ajax({
+var apiUrl = 'api/Teacher/GetListOfAllStudents';
+$(document).ready(function () {
+    // Send an AJAX request
+    $.getJSON(apiUrl)
+        .done(function (data) {
+            // On success, 'data' contains a list of students.
+            $.each(data, function (key, item) {
+                // Add a list item for the student.
+                this.studentArray.push(item.firstName);
+            });
+        });
+});
+
+$.ajax({
 
     headers: {
 
@@ -99,9 +123,9 @@ export default class QuizAssignmentComponent extends Vue {
 
     },
 
-    type: "POST",
+    type: "GET",
 
-    url: 'api/User/create',
+    url: 'api/Teacher/GetListOfAllStudents',
 
     data: JSON.stringify({
 
