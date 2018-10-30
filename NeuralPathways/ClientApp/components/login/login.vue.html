@@ -1,27 +1,28 @@
 ﻿<template>
     <div class="loginUI">
+        <a id="qa" href="/adminmain">Temp Main Menu Link</a>
         <h1 class="loginTitle">Log In!</h1><br />
 
-                        <strong>
-                            <p class="loginP">
-                                Email:<br />
-                               <input class="loginInput" type="email" name="femail" id="userEmail"><br>
-                            
-                            
-                                Password:
-                                <input class="loginInput" type="password" name="fpassword" id="userPassword"><br>
-                            
-
-                         
-                                I am a :
-                                <input class="loginInput" type="radio" name="role" value="student" id="student"> Student &#160
-                                <input class="loginInput" type="radio" name="role" value="teacher" id="teacher"> Teacher
-                            </p>
-
-                            <button class="loginButton" @click="loginButtonFunction">Login</button>
+        <strong>
+            <p class="loginP">
+                Email:<br />
+                <input class="loginInput" type="email" name="femail" id="userEmail"><br>
 
 
-                        </strong>
+                Password:
+                <input class="loginInput" type="password" name="fpassword" id="userPassword"><br>
+
+
+
+                I am a :
+                <input class="loginInput" type="radio" name="role" value="student" id="student"> Student &#160
+                <input class="loginInput" type="radio" name="role" value="teacher" id="teacher"> Teacher
+            </p>
+
+            <button class="loginButton" @click="loginButtonFunction">Login</button>
+
+
+        </strong>
 
         <p class="loginP">
             Don't have an account? Sign up
