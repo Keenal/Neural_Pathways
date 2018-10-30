@@ -24,21 +24,21 @@ window.onload = () => {
 }
 
 function addStudent(user: any, key: string | number | symbol) {
-    studentArray[Number(key)] = user.firstName + " " + user.lastName;
+    studentArray[Number(key)] = user;
 }
 
 function populateStudents() {
 
     for (var student in studentArray) {
         if (studentArray.hasOwnProperty(student)) {
-            var pair = studentArray[student];
+            var pair = studentArray[student].firstName + " " + studentArray[student].lastName;
             var text = document.createElement("text");
             var br = document.createElement("br");
             var description = document.createTextNode(pair);
             var checkbox = document.createElement("input");
 
             checkbox.type = "checkbox";
-            checkbox.name = "fromServerSide[]";
+            checkbox.name = studentArray[student].id;
             checkbox.value = pair;
             checkbox.id = "boxes"
             text.id = "txt";
@@ -84,3 +84,27 @@ function populateQuizzes() {
         }
     }
 }
+
+@Component
+export default class Assignment extends Vue {
+    assignQuiz() {
+        var ids = document.getElementById("boxes");
+        let element = <any>document.getElementsByName(studentArray[1].id);
+        if (element[0].checked == true) {
+            document.write("test");
+        }
+     //   if (ids.checked) {
+
+     //   }
+        // var ids = document.getElementsByName(studentArray[0].id);
+        // var checkedValue = null;
+ //       var inputElement = document.getElementById(studentArray[0].id);
+ //       for (var i = 0; inputElement[i]; i++) {
+           // inputElement = document.getElementsByClassName(studentArray[i].id);
+ //           if (inputElement[i].type == 'checkbox' && inputElement[i].checked == true) {
+ //               alert("YAYAYAYAYA");
+ //           }
+  //      }
+    }
+}
+      
