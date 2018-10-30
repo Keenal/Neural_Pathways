@@ -1,2 +1,83 @@
-﻿body {
+﻿#quizassignment {
+    padding-top: 30px;
+    position: relative;
+    color: white;
+    left: 475px;  
+    bottom: 80px;
+}
+
+#label1 {
+    position: relative;
+    color: dodgerblue;
+    bottom: 29px;
+    left: 300px;
+    font-size: 1.0em;
+}
+
+#label2 {
+    position: relative;
+    color: dodgerblue;
+    left: 700px;
+    bottom: 28px;
+    font-size: 1.0em;
+}
+
+#checkboxes1 {
+    position: relative;
+    left: 300px;
+    bottom: 11px;
+    -webkit-appearance: checkbox;
+    background: #f26514;
+    border-radius: 4px;
+}
+
+#boxes {
+    position: relative;
+    box-shadow: 2px 5px darkgray;
+    bottom: 5px;
+}
+
+#checkboxes2 {
+    position: relative;
+    left: 765px;
+    bottom: 22px;
+    -webkit-appearance: checkbox;
+    background: #f26514;
+    border-radius: 4px;
+}
+
+#txt {
+    position: relative;
+    color: black;
+    font-size: .8em;
+    bottom: 27px;
+    left: 20px;
+    width: 140px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#img2 {
+    position: relative;
+    bottom: 210px;
+    left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#list2 {
+    position: relative;
+    left: 50px;
+    bottom: 250px;
+    width: 150px;
+}
+
+#btn1 {
+    position: relative;
+    color: dodgerblue;
+    background-color: lightgray;
+    box-shadow: 4px 8px darkgray;
+    left: 540px;
+    margin: 0px auto;
 }

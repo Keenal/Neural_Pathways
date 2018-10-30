@@ -21,10 +21,11 @@ namespace NeuralPathways.Controllers
 
         // GET: api/Teacher/GetListOfAllStudents
         [HttpGet]
-        public IEnumerable<User> GetListOfAllStudents()
+        [ProducesResponseType(typeof(IList<User>), 200)]
+        public async Task<IActionResult> GetListOfAllStudents()
         {
-            var listOfTutors = _teacherService.ListOfStudentsGetAsync();
-            return (IEnumerable<User>)listOfTutors;
+            var stuff = await _teacherService.ListOfStudentsGetAsync();
+            return Ok(stuff);
         }
 
         [HttpPost("assignStudentQuiz")]

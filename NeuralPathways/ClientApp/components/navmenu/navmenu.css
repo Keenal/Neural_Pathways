@@ -4,7 +4,7 @@
    background-color: black;
 }
 
-ul {
+#ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ ul {
     overflow: auto;
 }
 
-li a {
+#li a {
     display: block;
     color: black;
     padding: 45px 10px;
@@ -26,7 +26,7 @@ li a {
 }
 
 
-    li a:hover:not(.active) {
+    #li a:hover:not(.active) {
         background-color: #ff6a00;
         color: white;
     }
