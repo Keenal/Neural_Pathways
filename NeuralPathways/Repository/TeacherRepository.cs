@@ -60,7 +60,7 @@ namespace NeuralPathways.Repository
             parameters.Add("questionOneId", quiz.Id);
             parameters.Add("questionOneId", quiz.Id);
 
-            return await FirstJsonResultAsync<Quiz>("assignQuizToStudent", parameters);
+            return await FirstJsonResultAsync<Quiz>("createQuiz", parameters);
         }
 
         public async Task<Question> MakeNewQuestionAsync(Question question)
@@ -82,6 +82,9 @@ namespace NeuralPathways.Repository
             parameters.Add("questionVariableK", question.QuestionVariableI);
             parameters.Add("questionVariableL", question.QuestionVariableL);
             parameters.Add("questionVariableM", question.QuestionVariableM);
+            parameters.Add("stepOneCorrectAnswer", question.StepOneCorrectAnswer);
+            parameters.Add("stepTwoCorrectAnswer", question.StepTwoCorrectAnswer);
+            parameters.Add("stepThreeCorrectAnswer", question.StepThreeCorrectAnswer);
 
             return await FirstJsonResultAsync<Question>("createQuestion", parameters);
         }

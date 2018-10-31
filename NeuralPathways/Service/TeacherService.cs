@@ -60,33 +60,25 @@ namespace NeuralPathways.Service
 
             string questionVariableB = PopulateQuestionVariableB();
             question.QuestionVariableB = questionVariableB;
-
             string questionVariableA = PopulateQuestionVariableA(questionVariableB);
             question.QuestionVariableA = questionVariableA;
-
             string questionVariableC = PopulateQuestionVariableC();
             question.QuestionVariableC = questionVariableC;
-
             question.QuestionVariableD = "1";
-
             question.QuestionVariableE = (questionVariableA + "/" + questionVariableB);
-
             string questionVariableF = (int.Parse(questionVariableA) / int.Parse(questionVariableB)).ToString();
             question.QuestionVariableF = questionVariableF;
-
             question.QuestionVariableG = (int.Parse(questionVariableA) + int.Parse(questionVariableC)).ToString();
-
             question.QuestionVariableH = (int.Parse(questionVariableA) * int.Parse(questionVariableB)).ToString();
-
             question.QuestionVariableI = (int.Parse(questionVariableB) * 2).ToString();
-
             question.QuestionVariableJ = (int.Parse(questionVariableF) - int.Parse(questionVariableC)).ToString();
-
             question.QuestionVariableK = (int.Parse(questionVariableC) * 2).ToString();
-
             question.QuestionVariableL = (int.Parse(questionVariableF) + int.Parse(questionVariableC)).ToString();
-
             question.QuestionVariableM = "1";
+
+            question.StepOneCorrectAnswer = stepOneCorrectAnswer;
+            question.StepTwoCorrectAnswer = stepTwoCorrectAnswer;
+            question.StepThreeCorrectAnswer = stepThreeCorrectAnswer;
 
             return await _teacherRepository.MakeNewQuestionAsync(question);
         }

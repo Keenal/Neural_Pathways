@@ -1,8 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NeuralPathways.Models
 {
@@ -59,5 +55,13 @@ namespace NeuralPathways.Models
         [JsonProperty("stepThreeAnswer")]
         public string StepThreeAnswer { get; set; }
 
+        [JsonProperty("stepOneCorrectAnswer")]
+        public string StepOneCorrectAnswer { get; set; }
+
+        [JsonProperty("stepTwoCorrectAnswer")]
+        public string StepTwoCorrectAnswer { get; set; }
+
+        [JsonProperty("stepThreeCorrectAnswer")]
+        public string StepThreeCorrectAnswer { get; set; }
     }
 }

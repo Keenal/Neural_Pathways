@@ -11,6 +11,9 @@ namespace NeuralPathways.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
+        [JsonProperty("grade")]
+        public string Grade { get; set; }
+
         [JsonProperty("assignedStudentsId")]
         public string AssignedStudentsId { get; set; }
 
