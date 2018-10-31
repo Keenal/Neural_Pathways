@@ -1,25 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace NeuralPathways.Models
 {
     public class Question
     {
+        [JsonProperty("id")]
         public string Id { get; set; }
-        public int QuestionVariableA { get; set; }
-        public int QuestionVariableB { get; set; }
-        public int QuestionVariableC { get; set; }
-        public int QuestionVariableD { get; set; }
+
+        [JsonProperty("questionVariableA")]
+        public string QuestionVariableA { get; set; }
+
+        [JsonProperty("questionVariableB")]
+        public string QuestionVariableB { get; set; }
+
+        [JsonProperty("questionVariableC")]
+        public string QuestionVariableC { get; set; }
+
+        [JsonProperty("questionVariableD")]
+        public string QuestionVariableD { get; set; }
+
+        [JsonProperty("questionVariableE")]
         public string QuestionVariableE { get; set; }
-        public int QuestionVariableF { get; set; }
-        public int QuestionVariableG { get; set; }
-        public int QuestionVariableH { get; set; }
-        public int QuestionVariableI { get; set; }
-        public int QuestionVariableJ { get; set; }
-        public int QuestionVariableK { get; set; }
-        public int QuestionVariableL { get; set; }
-        public int QuestionVariableM { get; set; }
+
+        [JsonProperty("questionVariableF")]
+        public string QuestionVariableF { get; set; }
+
+        [JsonProperty("questionVariableG")]
+        public string QuestionVariableG { get; set; }
+
+        [JsonProperty("questionVariableH")]
+        public string QuestionVariableH { get; set; }
+
+        [JsonProperty("questionVariableI")]
+        public string QuestionVariableI { get; set; }
+
+        [JsonProperty("questionVariableJ")]
+        public string QuestionVariableJ { get; set; }
+
+        [JsonProperty("questionVariableK")]
+        public string QuestionVariableK { get; set; }
+
+        [JsonProperty("questionVariableL")]
+        public string QuestionVariableL { get; set; }
+
+        [JsonProperty("questionVariableM")]
+        public string QuestionVariableM { get; set; }
+
+        [JsonProperty("stepOneAnswer")]
+        public string StepOneAnswer { get; set; }
+
+        [JsonProperty("stepTwoAnswer")]
+        public string StepTwoAnswer { get; set; }
+
+        [JsonProperty("stepThreeAnswer")]
+        public string StepThreeAnswer { get; set; }
+
+        [JsonProperty("stepOneCorrectAnswer")]
+        public string StepOneCorrectAnswer { get; set; }
+
+        [JsonProperty("stepTwoCorrectAnswer")]
+        public string StepTwoCorrectAnswer { get; set; }
+
+        [JsonProperty("stepThreeCorrectAnswer")]
+        public string StepThreeCorrectAnswer { get; set; }
     }
 }
