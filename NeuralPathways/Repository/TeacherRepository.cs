@@ -55,54 +55,35 @@ namespace NeuralPathways.Repository
             var parameters = new DynamicParameters();
 
             //Adds to Parameters
-            parameters.Add("QuizAssignedStudentsId", quiz.AssignedStudentsId);
-
-            parameters.Add("QuizQuestionA.Id", quiz.QuestionA.Id);
-            parameters.Add("QuizQuestionAQuestionVariableA", quiz.QuestionA.QuestionVariableA);
-            parameters.Add("QuizQuestionAQuestionVariableB", quiz.QuestionA.QuestionVariableB);
-            parameters.Add("QuizQuestionAQuestionVariableC", quiz.QuestionA.QuestionVariableC);
-            parameters.Add("QuizQuestionAQuestionVariableD", quiz.QuestionA.QuestionVariableD);
-            parameters.Add("QuizQuestionAQuestionVariableE", quiz.QuestionA.QuestionVariableE);
-            parameters.Add("QuizQuestionAQuestionVariableF", quiz.QuestionA.QuestionVariableF);
-            parameters.Add("QuizQuestionAQuestionVariableG", quiz.QuestionA.QuestionVariableG);
-            parameters.Add("QuizQuestionAQuestionVariableH", quiz.QuestionA.QuestionVariableH);
-            parameters.Add("QuizQuestionAQuestionVariableI", quiz.QuestionA.QuestionVariableI);
-            parameters.Add("QuizQuestionAQuestionVariableJ", quiz.QuestionA.QuestionVariableJ);
-            parameters.Add("QuizQuestionAQuestionVariableK", quiz.QuestionA.QuestionVariableI);
-            parameters.Add("QuizQuestionAQuestionVariableL", quiz.QuestionA.QuestionVariableL);
-            parameters.Add("QuizQuestionAQuestionVariableM", quiz.QuestionA.QuestionVariableM);
-
-            parameters.Add("QuizQuestionB.Id", quiz.QuestionB.Id);
-            parameters.Add("QuizQuestionBQuestionVariableA", quiz.QuestionB.QuestionVariableA);
-            parameters.Add("QuizQuestionBQuestionVariableB", quiz.QuestionB.QuestionVariableB);
-            parameters.Add("QuizQuestionBQuestionVariableC", quiz.QuestionB.QuestionVariableC);
-            parameters.Add("QuizQuestionBQuestionVariableD", quiz.QuestionB.QuestionVariableD);
-            parameters.Add("QuizQuestionBQuestionVariableE", quiz.QuestionB.QuestionVariableE);
-            parameters.Add("QuizQuestionBQuestionVariableF", quiz.QuestionB.QuestionVariableF);
-            parameters.Add("QuizQuestionBQuestionVariableG", quiz.QuestionB.QuestionVariableG);
-            parameters.Add("QuizQuestionBQuestionVariableH", quiz.QuestionB.QuestionVariableH);
-            parameters.Add("QuizQuestionBQuestionVariableI", quiz.QuestionB.QuestionVariableI);
-            parameters.Add("QuizQuestionBQuestionVariableJ", quiz.QuestionB.QuestionVariableJ);
-            parameters.Add("QuizQuestionBQuestionVariableK", quiz.QuestionB.QuestionVariableI);
-            parameters.Add("QuizQuestionBQuestionVariableL", quiz.QuestionB.QuestionVariableL);
-            parameters.Add("QuizQuestionBQuestionVariableM", quiz.QuestionB.QuestionVariableM);
-
-            parameters.Add("QuizQuestionC.Id", quiz.QuestionC.Id);
-            parameters.Add("QuizQuestionCQuestionVariableA", quiz.QuestionC.QuestionVariableA);
-            parameters.Add("QuizQuestionCQuestionVariableB", quiz.QuestionC.QuestionVariableB);
-            parameters.Add("QuizQuestionCQuestionVariableC", quiz.QuestionC.QuestionVariableC);
-            parameters.Add("QuizQuestionCQuestionVariableD", quiz.QuestionC.QuestionVariableD);
-            parameters.Add("QuizQuestionCQuestionVariableE", quiz.QuestionC.QuestionVariableE);
-            parameters.Add("QuizQuestionCQuestionVariableF", quiz.QuestionC.QuestionVariableF);
-            parameters.Add("QuizQuestionCQuestionVariableG", quiz.QuestionC.QuestionVariableG);
-            parameters.Add("QuizQuestionCQuestionVariableH", quiz.QuestionC.QuestionVariableH);
-            parameters.Add("QuizQuestionCQuestionVariableI", quiz.QuestionC.QuestionVariableI);
-            parameters.Add("QuizQuestionCQuestionVariableJ", quiz.QuestionC.QuestionVariableJ);
-            parameters.Add("QuizQuestionCQuestionVariableK", quiz.QuestionC.QuestionVariableI);
-            parameters.Add("QuizQuestionCQuestionVariableL", quiz.QuestionC.QuestionVariableL);
-            parameters.Add("QuizQuestionCQuestionVariableM", quiz.QuestionC.QuestionVariableM);
+            parameters.Add("assignedStudentsId", quiz.AssignedStudentsId);
+            parameters.Add("questionOneId", quiz.Id);
+            parameters.Add("questionOneId", quiz.Id);
+            parameters.Add("questionOneId", quiz.Id);
 
             return await FirstJsonResultAsync<Quiz>("assignQuizToStudent", parameters);
+        }
+
+        public async Task<Question> MakeNewQuestionAsync(Question question)
+        {
+            //Initializes Parameters for Stored Procedure
+            var parameters = new DynamicParameters();
+
+            //Adds to Parameters
+            parameters.Add("questionVariableA", question.QuestionVariableA);
+            parameters.Add("questionVariableB", question.QuestionVariableB);
+            parameters.Add("questionVariableC", question.QuestionVariableC);
+            parameters.Add("questionVariableD", question.QuestionVariableD);
+            parameters.Add("questionVariableE", question.QuestionVariableE);
+            parameters.Add("questionVariableF", question.QuestionVariableF);
+            parameters.Add("questionVariableG", question.QuestionVariableG);
+            parameters.Add("questionVariableH", question.QuestionVariableH);
+            parameters.Add("questionVariableI", question.QuestionVariableI);
+            parameters.Add("questionVariableJ", question.QuestionVariableJ);
+            parameters.Add("questionVariableK", question.QuestionVariableI);
+            parameters.Add("questionVariableL", question.QuestionVariableL);
+            parameters.Add("questionVariableM", question.QuestionVariableM);
+
+            return await FirstJsonResultAsync<Question>("createQuestion", parameters);
         }
     }
 }
