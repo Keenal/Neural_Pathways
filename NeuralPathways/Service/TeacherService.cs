@@ -11,6 +11,9 @@ namespace NeuralPathways.Service
     public class TeacherService : ITeacherService
     {
         private readonly ITeacherRepository _teacherRepository;
+        private readonly string stepOneCorrectAnswer = "d";
+        private readonly string stepTwoCorrectAnswer = "a";
+        private readonly string stepThreeCorrectAnswer = "c";
 
         public TeacherService(ITeacherRepository teacherRepository)
         {
@@ -28,78 +31,75 @@ namespace NeuralPathways.Service
 
         public async Task<Quiz> AssignStudentQuizAsync(User user)
         {
-            var quiz = CreateQuiz();
-            var studentId = user.Id;
+            var quiz = await CreateQuiz();
+            string studentId = user.Id;
             quiz.AssignedStudentsId = studentId;
 
             return await _teacherRepository.AssignStudentQuizAsync(quiz);
         }
 
-        public Quiz CreateQuiz()
+        public async Task<Quiz> CreateQuiz()
         {
-            var quiz = new Quiz
-            {
-                QuestionA = CreateQuestion(),
-                QuestionB = CreateQuestion(),
-                QuestionC = CreateQuestion()
-            };
+            var quiz = new Quiz();
+
+            Question questionOne = await CreateQuestion();
+            quiz.QuestionOneId = questionOne.Id;
+
+            Question questionTwo = await CreateQuestion();
+            quiz.QuestionTwoId = questionTwo.Id;
+
+            Question questionThree = await CreateQuestion();
+            quiz.QuestionThreeId = questionThree.Id;
+
             return quiz;
         }
 
-        public Question CreateQuestion()
+        public async Task<Question> CreateQuestion()
         {
             var question = new Question();
 
-            int questionVariableB = PopulateQuestionVariableB();
+            string questionVariableB = PopulateQuestionVariableB();
             question.QuestionVariableB = questionVariableB;
-
-            int questionVariableA = PopulateQuestionVariableA(questionVariableB);
+            string questionVariableA = PopulateQuestionVariableA(questionVariableB);
             question.QuestionVariableA = questionVariableA;
-
-            int questionVariableC = PopulateQuestionVariableC();
+            string questionVariableC = PopulateQuestionVariableC();
             question.QuestionVariableC = questionVariableC;
-
-            question.QuestionVariableD = 1;
-
-            question.QuestionVariableE = (questionVariableA.ToString() + "/" + questionVariableB.ToString());
-
-            int questionVariableF = (questionVariableA / questionVariableB);
+            question.QuestionVariableD = "1";
+            question.QuestionVariableE = (questionVariableA + "/" + questionVariableB);
+            string questionVariableF = (int.Parse(questionVariableA) / int.Parse(questionVariableB)).ToString();
             question.QuestionVariableF = questionVariableF;
+            question.QuestionVariableG = (int.Parse(questionVariableA) + int.Parse(questionVariableC)).ToString();
+            question.QuestionVariableH = (int.Parse(questionVariableA) * int.Parse(questionVariableB)).ToString();
+            question.QuestionVariableI = (int.Parse(questionVariableB) * 2).ToString();
+            question.QuestionVariableJ = (int.Parse(questionVariableF) - int.Parse(questionVariableC)).ToString();
+            question.QuestionVariableK = (int.Parse(questionVariableC) * 2).ToString();
+            question.QuestionVariableL = (int.Parse(questionVariableF) + int.Parse(questionVariableC)).ToString();
+            question.QuestionVariableM = "1";
 
-            question.QuestionVariableG = (questionVariableA + questionVariableC);
+            question.StepOneCorrectAnswer = stepOneCorrectAnswer;
+            question.StepTwoCorrectAnswer = stepTwoCorrectAnswer;
+            question.StepThreeCorrectAnswer = stepThreeCorrectAnswer;
 
-            question.QuestionVariableH = (questionVariableA * questionVariableB);
-
-            question.QuestionVariableI = (questionVariableB * 2);
-
-            question.QuestionVariableJ = (questionVariableF - questionVariableC);
-
-            question.QuestionVariableK = (questionVariableC * 2);
-
-            question.QuestionVariableL = (questionVariableF + questionVariableC);
-
-            question.QuestionVariableM = 1;
-
-            return question;
+            return await _teacherRepository.MakeNewQuestionAsync(question);
         }
 
-        public int PopulateQuestionVariableB()
+        public string PopulateQuestionVariableB()
         {
             Random random = new Random();
-            return random.Next(1, 10);
+            return random.Next(1, 10).ToString();
         }
 
-        public int PopulateQuestionVariableA(int questionVariableB)
+        public string PopulateQuestionVariableA(string questionVariableB)
         {
             Random random = new Random();
             int multiplier = random.Next(1, 5);
-            return (multiplier * questionVariableB);
+            return (multiplier * int.Parse(questionVariableB)).ToString();
         }
 
-        public int PopulateQuestionVariableC()
+        public string PopulateQuestionVariableC()
         {
             Random random = new Random();
-            return random.Next(1, 50);
+            return random.Next(1, 50).ToString();
         }
     }
 }
