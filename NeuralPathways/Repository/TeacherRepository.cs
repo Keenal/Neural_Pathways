@@ -56,9 +56,9 @@ namespace NeuralPathways.Repository
 
             //Adds to Parameters
             parameters.Add("assignedStudentsId", quiz.AssignedStudentsId);
-            parameters.Add("questionOneId", quiz.Id);
-            parameters.Add("questionOneId", quiz.Id);
-            parameters.Add("questionOneId", quiz.Id);
+            parameters.Add("questionOneId", quiz.QuestionOneId);
+            parameters.Add("questionTwoId", quiz.QuestionTwoId);
+            parameters.Add("questionThreeId", quiz.QuestionThreeId);
 
             return await FirstJsonResultAsync<Quiz>("createQuiz", parameters);
         }
