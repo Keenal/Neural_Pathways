@@ -38,7 +38,8 @@ function populateStudents() {
             var checkbox = document.createElement("input");
 
             checkbox.type = "checkbox";
-            checkbox.name = studentArray[student].id;
+         //   checkbox.name = studentArray[student].id;
+            checkbox.className = "students";
             checkbox.value = pair;
             checkbox.id = "boxes"
             text.id = "txt";
@@ -70,7 +71,7 @@ function populateQuizzes() {
             var checkbox = document.createElement("input");
 
             checkbox.type = "checkbox";
-            checkbox.name = "fromServerSide[]";
+            checkbox.className = "quiz";
             checkbox.value = pair;
             checkbox.id = "boxes"
             text.id = "txt";
@@ -88,11 +89,36 @@ function populateQuizzes() {
 @Component
 export default class Assignment extends Vue {
     assignQuiz() {
-        var ids = document.getElementById("boxes");
-        let element = <any>document.getElementsByName(studentArray[1].id);
-        if (element[0].checked == true) {
-            document.write("test");
+        var elements = <any>document.getElementsByClassName("students");
+        for (var i = 0; elements[i]; i++) {
+            if (elements[i].checked == true) {
+            // Working: alert(studentArray[i].firstName);  
+                $.ajax({
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    type: "POST",
+                    url: 'api/Teacher/assignStudentQuiz',
+                    data: JSON.stringify({
+                        firstname: studentArray[i].firstName,
+                        lastname: studentArray[i].lastName,
+                        email: studentArray[i].email,
+                        password: studentArray[i].password,
+                        role: studentArray[i].role
+                    }),
+                    dataType: 'json',
+                    success: function (response) {
+                        alert("Quizzes have been assigned!");
+                    },
+                    error: function (response) {
+                        alert("ERROR: Failure!");  // Failing because of database or something I'm doing?
+                    }
+                });
+                
+            }
         }
+        
      //   if (ids.checked) {
 
      //   }
