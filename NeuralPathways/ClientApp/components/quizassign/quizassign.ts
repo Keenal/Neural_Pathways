@@ -92,6 +92,7 @@ export default class Assignment extends Vue {
         var elements = <any>document.getElementsByClassName("students");
         for (var i = 0; elements[i]; i++) {
             if (elements[i].checked == true) {
+               // alert(studentArray[i].firstName + " " + studentArray[i].lastName + " " + studentArray[i].id);
             // Working: alert(studentArray[i].firstName);  
                 $.ajax({
                     headers: {
@@ -103,16 +104,17 @@ export default class Assignment extends Vue {
                     data: JSON.stringify({
                         firstname: studentArray[i].firstName,
                         lastname: studentArray[i].lastName,
+                        id: studentArray[i].id,
                         email: studentArray[i].email,
                         password: studentArray[i].password,
                         role: studentArray[i].role
                     }),
                     dataType: 'json',
-                    success: function (response) {
+                    success: function (response) {  // Research what this is even doing
                         alert("Quizzes have been assigned!");
                     },
                     error: function (response) {
-                        alert("ERROR: Failure!");  // Failing because of database or something I'm doing?
+                        alert("Oh snap, FAILURE!!");  // Failing because of database or something I'm doing?
                     }
                 });
                 
