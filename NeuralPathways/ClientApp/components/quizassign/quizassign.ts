@@ -6,6 +6,9 @@ import $ from 'jquery'
 var quizArray = new Array();
 var studentArray = new Array();
 
+/*
+ * Upon loading the page connect to teacherController
+ */
 window.onload = () => {
     var apiUrl = 'api/Teacher';
     $(document).ready(function () {
@@ -27,8 +30,10 @@ function addStudent(user: any, key: string | number | symbol) {
     studentArray[Number(key)] = user;
 }
 
+/*
+ * Dynamically populate checkboxes with students from the database
+ */
 function populateStudents() {
-
     for (var student in studentArray) {
         if (studentArray.hasOwnProperty(student)) {
             var pair = studentArray[student].firstName + " " + studentArray[student].lastName;
@@ -38,7 +43,6 @@ function populateStudents() {
             var checkbox = document.createElement("input");
 
             checkbox.type = "checkbox";
-         //   checkbox.name = studentArray[student].id;
             checkbox.className = "students";
             checkbox.value = pair;
             checkbox.id = "boxes"
@@ -58,9 +62,12 @@ function populateStudents() {
     }
 }
 
+/*
+ * Dynamically populate checkboxes with quizzes from the database
+ */
 function populateQuizzes() {
-    // Must change this when new code becomes available to fill the quiz array
-    quizArray = ["Quiz 001", "Quiz 002", "Quiz 003", "Quiz 004"];
+    // Must change this when/if new code becomes available to fill the quiz array
+    quizArray = ["Quiz 001"];
 
     for (var quiz in quizArray) {
         if (quizArray.hasOwnProperty(quiz)) {
@@ -88,12 +95,22 @@ function populateQuizzes() {
 
 @Component
 export default class Assignment extends Vue {
+
+    /*
+     * Connect to teacherController and assign user selected checkboxes of students to quizzes 
+     */ 
     assignQuiz() {
+        var j = 0;
+        var AlertLoaded = false;
+        var assignedStudents = new Array();
         var elements = <any>document.getElementsByClassName("students");
+
         for (var i = 0; elements[i]; i++) {
             if (elements[i].checked == true) {
-               // alert(studentArray[i].firstName + " " + studentArray[i].lastName + " " + studentArray[i].id);
-            // Working: alert(studentArray[i].firstName);  
+                // Gather checked student names
+                assignedStudents[j] = studentArray[i].firstName;
+                ++j;
+
                 $.ajax({
                     headers: {
                         'Accept': 'application/json',
@@ -110,29 +127,37 @@ export default class Assignment extends Vue {
                         role: studentArray[i].role
                     }),
                     dataType: 'json',
-                    success: function (response) {  // Research what this is even doing
-                        alert("Quizzes have been assigned!");
+                    success: function (response) {  
+                        // Alert user of success only once
+                        if ((!AlertLoaded)) {
+                            AlertLoaded = true;
+                            alert("Quizzes have been assigned to " + gatherAssignedStudents() + ".");
+                        }
                     },
                     error: function (response) {
-                        alert("Oh snap, FAILURE!!");  // Failing because of database or something I'm doing?
+                        alert("ERROR: quiz assignment failed!");
                     }
-                });
-                
+                });   
+
+                /*
+                 * Format a string of usernames that have been successfully assigned a quiz
+                 */ 
+                function gatherAssignedStudents() {
+                    var formattedPrompt = "";
+
+                    for (var i = 0; i < assignedStudents.length; i++) {
+                        if (i == 0)
+                            formattedPrompt = assignedStudents[i];
+                        else
+                            if (assignedStudents.length == i + 1)
+                                formattedPrompt += ", and " + assignedStudents[i];
+                            else
+                                formattedPrompt += ", " + assignedStudents[i];
+                    }
+
+                    return formattedPrompt;
+                }
             }
         }
-        
-     //   if (ids.checked) {
-
-     //   }
-        // var ids = document.getElementsByName(studentArray[0].id);
-        // var checkedValue = null;
- //       var inputElement = document.getElementById(studentArray[0].id);
- //       for (var i = 0; inputElement[i]; i++) {
-           // inputElement = document.getElementsByClassName(studentArray[i].id);
- //           if (inputElement[i].type == 'checkbox' && inputElement[i].checked == true) {
- //               alert("YAYAYAYAYA");
- //           }
-  //      }
     }
 }
-      
