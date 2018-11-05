@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\components\quiz\quiz.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="ClientApp\wwwroot\dist\549b73dc18feecec5b448e6dc3da586c.jpg" />
     <Content Include="ClientApp\wwwroot\dist\d1c3c1d2f5f59c5bdd976d913e373b6c.png" />
     <Content Include="ClientApp\wwwroot\dist\main.js" />
@@ -31,6 +35,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\quiz\quiz.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

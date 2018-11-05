@@ -1,47 +1,62 @@
 ﻿<template>
     <div class="quizUI">
+        <p class="quizUIP">Quiz time!</p>
 
-        <table class="menuTable">
-            <tbody>
-                <tr class ="menuTableLink">
-                    <td><a href="/">Quizzes</a></td>
-                    <td><a href="/">Scores</a></td>
-                    <td><a href="/">History</a></td>
-                </tr>
-            </tbody>
+        <table class="quizUITable">
+            <tr>
+                <th class="QuizUITableTHTD">Available Quizzes:</th>
+                <th class="QuizUITableTHTD">Scores:</th>
+            </tr>
+            <tr>
+
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz1' name="quiz"> Quiz#1</label>
+
+                </td>
+                <td>
+
+                    <label for='regular'>-</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz2' name="quiz"> Quiz#2</label>
+
+                </td>
+                <td>
+
+                    <label for='express'>-</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz3' name="quiz"> Quiz#3</label>
+
+                </td>
+                <td>
+
+                    <label for='express'>-</label>
+
+                </td>
+            </tr>
         </table>
 
-        <table class="quizTable">
-            <thead>
-                <tr>
-                    <th colspan="2">Question will go here</th>
-                </tr>
-            </thead>
-           
-            <tbody>
-                <tr>
-                    <td>
-                        <input class="quizInput" type="radio" name="quizChoice" value="Ans1" id="Ans1"> Ans1
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="quizInput" type="radio" name="quizChoice" value="Ans2" id="Ans2"> Ans2
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="quizInput" type="radio" name="quizChoice" value="Ans3" id="Ans3"> Ans3
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="quizInput" type="radio" name="quizChoice" value="Ans4" id="Ans4"> Ans4
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div id="takeQuizButton">
+            <button @click="takeQuizButtonFunction">Start</button>
+        </div>
+
+
+        
+
     </div>
-</template>
+    </template>
 
 <style src="./quiz.css"></style>
+<script src="./quiz.js"></script>

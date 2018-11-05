@@ -12,7 +12,9 @@ const routes = [
     { path: '/adminmain', component: require('./components/adminmain/adminmain.vue.html') },
     { path: '/quizassign', component: require('./components/quizassign/quizassign.vue.html') },
     { path: '/reports', component: require('./components/reports/reports.vue.html') },
-    { path: '/logout', component: require('./components/logout/logout.vue.html') }
+    { path: '/logout', component: require('./components/logout/logout.vue.html') },
+    { path: '/quiz1', component: require('./components/quiz1/quiz1pg1.vue.html') }
+
 ];
 
 new Vue({
