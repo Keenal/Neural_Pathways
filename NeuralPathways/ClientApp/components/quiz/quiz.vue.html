@@ -12,51 +12,54 @@
             <tr>
                 <td>
 
-                    <label><input type="radio" id='quiz1' name="quiz"> Quiz#1</label>
+                    <label><input type="radio" id='quiz1' name="quiz" > Quiz#1</label>
 
                 </td>
                 <td>
 
-                    <label for='regular'>-</label>
-
-                </td>
-            </tr>
-            <tr>
-                <td>
-
-                    <label><input type="radio" id='quiz2' name="quiz"> Quiz#2</label>
-
-                </td>
-                <td>
-
-                    <label for='express'>-</label>
+                    <label>-</label>
 
                 </td>
             </tr>
             <tr>
                 <td>
 
-                    <label><input type="radio" id='quiz3' name="quiz"> Quiz#3</label>
+                    <label><input type="radio" id='quiz2' name="quiz" > Quiz#2</label>
 
                 </td>
                 <td>
 
-                    <label for='express'>-</label>
+                    <label>-</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz3' name="quiz" > Quiz#3</label>
+
+                </td>
+                <td>
+
+                    <label>-</label>
 
                 </td>
             </tr>
         </table>
 
 
+
+
         <div id="takeQuizButton">
+            <!--<button [disabled]="!question.answer" *ngIf="i < questions.length - 1" (click)="showNext()" ion-button text-only>Start</button>-->
             <button @click="takeQuizButtonFunction">Start</button>
         </div>
 
 
-        
+
 
     </div>
     </template>
 
 <style src="./quiz.css"></style>
-<script src="./quiz.js"></script>
+<script src="./quiz.ts"></script>

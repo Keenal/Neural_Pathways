@@ -13,7 +13,9 @@ const routes = [
     { path: '/quizassign', component: require('./components/quizassign/quizassign.vue.html') },
     { path: '/reports', component: require('./components/reports/reports.vue.html') },
     { path: '/logout', component: require('./components/logout/logout.vue.html') },
-    { path: '/quiz1', component: require('./components/quiz1/quiz1pg1.vue.html') }
+    { path: '/quiz1', component: require('./components/quiz1/quiz1pg1.vue.html') },
+    { path: '/quiz2', component: require('./components/quiz2/quiz2pg1.vue.html') },
+    { path: '/quiz3', component: require('./components/quiz3/quiz3pg1.vue.html') }
 
 ];
 
