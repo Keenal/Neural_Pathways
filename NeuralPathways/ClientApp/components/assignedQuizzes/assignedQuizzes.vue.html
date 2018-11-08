@@ -1,0 +1,64 @@
+﻿<template>
+    <div class="assignedQuizzesUI">
+        <p class="assignedQuizzesUIP">Quiz time!</p>
+
+        <table class="assignedQuizzesUITable">
+            <tr>
+                <th class="AssignedQuizzesUITableTHTD">Available Quizzes:</th>
+                <th class="AssignedQuizzesUITableTHTD">Scores:</th>
+            </tr>
+            <tr>
+
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz1' name="quiz" > Quiz#1</label>
+
+                </td>
+                <td>
+
+                    <label>-</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz2' name="quiz" > Quiz#2</label>
+
+                </td>
+                <td>
+
+                    <label>-</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='quiz3' name="quiz" > Quiz#3</label>
+
+                </td>
+                <td>
+
+                    <label>-</label>
+
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <div id="takeQuizButton">
+            <button @click="takeQuizButtonFunction">Start</button>
+        </div>
+
+
+
+
+    </div>
+    </template>
+
+<style src="./assignedQuizzes.css"></style>
+<script src="./assignedQuizzes.ts"></script>

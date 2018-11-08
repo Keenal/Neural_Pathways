@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\components\quiz\quiz.ts" />
+    <None Remove="ClientApp\components\assignedQuizzes\assignedQuizzes.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\components\quiz\quiz.ts" />
+    <TypeScriptCompile Include="ClientApp\components\assignedQuizzes\assignedQuizzes.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

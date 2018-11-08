@@ -1,10 +1,10 @@
 ﻿<template>
     <div class="quizUI">
-        <p class="quizUIP">Quiz time!</p>
+        <p class="quizUIP">Quiz</p>
 
         <table class="quizUITable">
             <tr>
-                <th class="QuizUITableTHTD">Available Quizzes:</th>
+                <th class="QuizUITableTHTD">Questions:</th>
                 <th class="QuizUITableTHTD">Scores:</th>
             </tr>
             <tr>
@@ -12,7 +12,7 @@
             <tr>
                 <td>
 
-                    <label><input type="radio" id='quiz1' name="quiz" > Quiz#1</label>
+                    <label><input type="radio" id='question1' name="question"> Question#1</label>
 
                 </td>
                 <td>
@@ -24,7 +24,7 @@
             <tr>
                 <td>
 
-                    <label><input type="radio" id='quiz2' name="quiz" > Quiz#2</label>
+                    <label><input type="radio" id='question2' name="question"> Question#2</label>
 
                 </td>
                 <td>
@@ -36,7 +36,7 @@
             <tr>
                 <td>
 
-                    <label><input type="radio" id='quiz3' name="quiz" > Quiz#3</label>
+                    <label><input type="radio" id='question3' name="question"> Question#3</label>
 
                 </td>
                 <td>
@@ -50,16 +50,12 @@
 
 
 
-        <div id="takeQuizButton">
-            <!--<button [disabled]="!question.answer" *ngIf="i < questions.length - 1" (click)="showNext()" ion-button text-only>Start</button>-->
-            <button @click="takeQuizButtonFunction">Start</button>
+        <div id="takeQuestionButton">
+            <button @click="takeQuestionButtonFunction">Start</button>
         </div>
 
-
-
-
     </div>
-    </template>
+</template>
 
-<style src="./quiz.css"></style>
-<script src="./quiz.ts"></script>
+<style src="./quizPage.css"></style>
+<script src="./quizPage.ts"></script>

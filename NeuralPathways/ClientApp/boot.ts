@@ -8,14 +8,16 @@ Vue.use(VueRouter);
 const routes = [
     { path: '/', component: require('./components/login/login.vue.html') },
     { path: '/signup', component: require('./components/signup/signup.vue.html') },
-    { path: '/quiz', component: require('./components/quiz/quiz.vue.html') },
+    { path: '/assignedQuizzes', component: require('./components/assignedQuizzes/assignedQuizzes.vue.html') },
     { path: '/adminmain', component: require('./components/adminmain/adminmain.vue.html') },
     { path: '/quizassign', component: require('./components/quizassign/quizassign.vue.html') },
     { path: '/reports', component: require('./components/reports/reports.vue.html') },
     { path: '/logout', component: require('./components/logout/logout.vue.html') },
-    { path: '/quiz1', component: require('./components/quiz1/quiz1pg1.vue.html') },
-    { path: '/quiz2', component: require('./components/quiz2/quiz2pg1.vue.html') },
-    { path: '/quiz3', component: require('./components/quiz3/quiz3pg1.vue.html') }
+    { path: '/quizPage', component: require('./components/quizPage/quizPage.vue.html') },
+    { path: '/displayQuestionStepOne', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOne.vue.html') },
+    { path: '/displayQuestionStepTwo', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwo.vue.html') },
+    { path: '/displayQuestionStepThree', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThree.vue.html') }
+
 
 ];
 
