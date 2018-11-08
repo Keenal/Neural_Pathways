@@ -15,6 +15,10 @@ const routes = [
     { path: '/logout', component: require('./components/logout/logout.vue.html') },
     { path: '/quizPage', component: require('./components/quizPage/quizPage.vue.html') },
     { path: '/displayQuestionStepOne', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOne.vue.html') },
+    { path: '/displayQuestionStepOneA', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOneA/displayQuestionStepOneA.vue.html') },
+    { path: '/displayQuestionStepOneB', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOneB/displayQuestionStepOneB.vue.html') },
+    { path: '/displayQuestionStepOneC', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOneC/displayQuestionStepOneC.vue.html') },
+    { path: '/displayQuestionStepOneD', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOneD/displayQuestionStepOneD.vue.html') },
     { path: '/displayQuestionStepTwo', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwo.vue.html') },
     { path: '/displayQuestionStepThree', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThree.vue.html') }
 
