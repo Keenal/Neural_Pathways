@@ -1,4 +1,9 @@
-﻿.assignedQuizzesUIP {
+﻿.assignedQuizzesTitle {
+    color: #007bff;
+    font-family: Georgia;
+}
+
+.assignedQuizzesUIP {
     padding-top: 20px;
     color: #007bff;
     font-family: Georgia;
