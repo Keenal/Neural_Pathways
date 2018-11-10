@@ -19,7 +19,7 @@ namespace NeuralPathways.Controllers
             _studentService = studentService;
         }
 
-        [HttpGet]
+        [HttpGet("getStudentsAssignedQuizzes")]
         [ProducesResponseType(typeof(IList<Quiz>), 200)]
         public async Task<IActionResult> GetStudentsAssignedQuizzes()
         {
