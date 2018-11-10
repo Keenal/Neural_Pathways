@@ -11,9 +11,9 @@
 
             <tr>
                 <td>
-
-                    <label><input type="radio" id='question1' name="question"> Question#1</label>
-
+                    <div id="QuestionOneButton">
+                        <button class="questionButton" @click="questionOneButtonFunction">Question 1</button>
+                    </div>
                 </td>
                 <td>
 
@@ -23,9 +23,9 @@
             </tr>
             <tr>
                 <td>
-
-                    <label><input type="radio" id='question2' name="question"> Question#2</label>
-
+                    <div id="QuestionTwoButton">
+                        <button class="questionButton" @click="questionTwoButtonFunction">Question 2</button>
+                    </div>
                 </td>
                 <td>
 
@@ -35,9 +35,9 @@
             </tr>
             <tr>
                 <td>
-
-                    <label><input type="radio" id='question3' name="question"> Question#3</label>
-
+                    <div id="QuestionThreeButton">
+                        <button class="questionButton" @click="questionThreeButtonFunction">Question 3</button>
+                    </div>
                 </td>
                 <td>
 
@@ -48,10 +48,8 @@
         </table>
 
 
-
-
-        <div id="takeQuestionButton">
-            <button @click="takeQuestionButtonFunction">Start</button>
+        <div id="completeQuizButton">
+            <button class="completeQuizButton" @click="completeQuizButtonFunction">Complete Quiz</button>
         </div>
 
     </div>

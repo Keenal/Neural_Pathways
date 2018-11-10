@@ -20,7 +20,15 @@ const routes = [
     { path: '/displayQuestionStepOneC', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOneC/displayQuestionStepOneC.vue.html') },
     { path: '/displayQuestionStepOneD', component: require('./components/displayQuestion/displayQuestionStepOne/displayQuestionStepOneD/displayQuestionStepOneD.vue.html') },
     { path: '/displayQuestionStepTwo', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwo.vue.html') },
-    { path: '/displayQuestionStepThree', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThree.vue.html') }
+    { path: '/displayQuestionStepTwoA', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoA/displayQuestionStepTwoA.vue.html') },
+    { path: '/displayQuestionStepTwoB', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoB/displayQuestionStepTwoB.vue.html') },
+    { path: '/displayQuestionStepTwoC', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoC/displayQuestionStepTwoC.vue.html') },
+    { path: '/displayQuestionStepTwoD', component: require('./components/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoD/displayQuestionStepTwoD.vue.html') },
+    { path: '/displayQuestionStepThree', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThree.vue.html') },
+    { path: '/displayQuestionStepThreeA', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeA/displayQuestionStepThreeA.vue.html') },
+    { path: '/displayQuestionStepThreeB', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeB/displayQuestionStepThreeB.vue.html') },
+    { path: '/displayQuestionStepThreeC', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeC/displayQuestionStepThreeC.vue.html') },
+    { path: '/displayQuestionStepThreeD', component: require('./components/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeD/displayQuestionStepThreeD.vue.html') }
 
 
 ];
