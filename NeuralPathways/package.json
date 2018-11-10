@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@types/jquery": "^3.3.21"
+    "@types/jquery": "^3.3.21",
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.13.0",
