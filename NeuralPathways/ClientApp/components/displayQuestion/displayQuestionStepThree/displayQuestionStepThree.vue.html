@@ -1,0 +1,51 @@
+﻿<template>
+    <div class="displayQuestionStepThreeUI">
+        <p class="displayQuestionStepThreeUIP">
+            What is the third step in solving A = B (X - C) for X?
+        </p>
+
+        <table class="displayQuestionStepThreeUITable">
+            <tr>
+                <th class="displayQuestionStepThreeUIPTHTD">The previous step got us L = X</th>
+            </tr>
+            <tr>
+
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='answerA' name="answer"> There is no solution</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='answerB' name="answer"> Subtract X from both sides</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='answerC' name="answer"> L = X is the final solution</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label><input type="radio" id='answerD' name="answer"> Subtract L from both sides</label>
+
+                </td>
+            </tr>
+        </table>
+
+        <div id="answerQuestionStepButton">
+            <button @click="answerQuestionStepButtonFunction">Submit</button>
+        </div>
+
+    </div>
+</template>
+
+<style src="./displayQuestionStepThree.css"></style>
+<script src="./displayQuestionStepThree.ts"></script>

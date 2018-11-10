@@ -1,11 +1,11 @@
 ﻿<template>
-    <div class="quizUI">
-        <p class="quizUIP">Quiz time!</p>
+    <div class="assignedQuizzesUI">
+        <p class="assignedQuizzesUIP">Quiz time!</p>
 
-        <table class="quizUITable">
+        <table class="assignedQuizzesUITable">
             <tr>
-                <th class="QuizUITableTHTD">Available Quizzes:</th>
-                <th class="QuizUITableTHTD">Scores:</th>
+                <th class="AssignedQuizzesUITableTHTD">Available Quizzes:</th>
+                <th class="AssignedQuizzesUITableTHTD">Scores:</th>
             </tr>
             <tr>
 
@@ -51,7 +51,6 @@
 
 
         <div id="takeQuizButton">
-            <!--<button [disabled]="!question.answer" *ngIf="i < questions.length - 1" (click)="showNext()" ion-button text-only>Start</button>-->
             <button @click="takeQuizButtonFunction">Start</button>
         </div>
 
@@ -61,5 +60,5 @@
     </div>
     </template>
 
-<style src="./quiz.css"></style>
-<script src="./quiz.ts"></script>
+<style src="./assignedQuizzes.css"></style>
+<script src="./assignedQuizzes.ts"></script>

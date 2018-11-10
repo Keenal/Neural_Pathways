@@ -3,16 +3,16 @@ import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
 
 @Component
-export default class QuizComponent extends Vue {
+export default class AssignedQuizzesComponent extends Vue {
     takeQuizButtonFunction() {
         if ($('input[id=quiz1]:checked').length > 0) {
-            window.location.href = '/quiz1';
+            window.location.href = '/quizPage';
         }
         if ($('input[id=quiz2]:checked').length > 0) {
-            window.location.href = '/quiz2';
+            window.location.href = '/quizPage';
         }
         if ($('input[id=quiz3]:checked').length > 0) {
-            window.location.href = '/quiz3';
+            window.location.href = '/quizPage';
         }
     }
 }

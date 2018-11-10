@@ -1,0 +1,36 @@
+﻿<template>
+    <div class="displayQuestionStepOneCUI">
+        <p class="displayQuestionStepOneCUIP">
+            No, we would not want to multiply both sides by B, this would actually move us a step in the wrong direction:
+        </p>
+        <p class="displayQuestionStepOneCUIP">
+            A * B = B (X - C) * B 		→	H = I (X - C)
+        </p>
+
+        <table class="displayQuestionStepOneCUITable">
+            <tr>
+                <th>
+                    Instead we want to divide both sides by B. This will move us closer to having X alone on one side of the equation:
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    A / B = (B (X - C)) / B 	→	F = (X - C)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Rational: We are trying to isolate the variable X . This means we want X to be all by itself on one side of the equation. Each step should help peel a layer surrounding the X , and move it (all other numbers and variables) to the opposite side of the “=” sign.
+                </td>
+            </tr>
+        </table>
+
+        <div id="nextStepButton">
+            <button @click="nextStepButtonFunction">Next Step</button>
+        </div>
+
+    </div>
+</template>
+
+<style src="./displayQuestionStepOneC.css"></style>
+<script src="./displayQuestionStepOneC.ts"></script>
