@@ -18,4 +18,10 @@ export default class ListOfAssignedQuizzes extends Vue {
             this.isLoaded = true;
         });
     }
+
+    selectQuizButtonFunction(id: string) {
+        this.selectedQuiz.id = id;
+        window.location.href = '/displayQuestionStepOne';
+        alert(this.selectedQuiz.id);
+    }
 }
