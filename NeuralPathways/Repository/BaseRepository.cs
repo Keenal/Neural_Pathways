@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
+using NeuralPathways.Models;
 
 namespace NeuralPathways.Repository
 {
     public class BaseRepository
     {
         private IDbConnection Connection => new SqlConnection(_connection);
-
         private readonly string _connection;
-        // dgtrsgrhdrfhsd
+        protected static User loggedInUser = new User();
+
         //default constructor
         public BaseRepository(string connection)
         {
