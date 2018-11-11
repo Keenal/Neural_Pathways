@@ -18,6 +18,6 @@ namespace NeuralPathways.Service.Abstract
 
         Task UserProfileDeleteByEmailAsync(string email);
 
-        Task<User> UserLoginAsync(User user);
+        Task<User> UserLoginAsync(string email, string password);
     }
 }

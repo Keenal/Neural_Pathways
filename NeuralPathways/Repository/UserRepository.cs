@@ -68,5 +68,26 @@ namespace NeuralPathways.Repository
 
             await ExecuteAsync("deleteUserByEmail", parameters);
         }
+
+        /// <summary>
+        /// checks to see if user email and user password matches email and password in the db and lets them log in
+        /// </summary>
+        /// <param name="userEmail"></param>
+        /// <param name="userPassword"></param>
+        /// <returns></returns>
+        public async Task<User> UserLoginAsync(string userEmail, string userPassword)
+        {
+            //Initializes Parameters for Stored Procedure
+            var parameters = new DynamicParameters();
+
+            parameters.Add("Email", userEmail);
+            parameters.Add("Password", userPassword);
+
+
+            //Returns the User obj that matches user entered email and password
+            User user = await FirstJsonResultAsync<User>("readUserByEmailAndPassword", parameters);
+            loggedInUser = user;
+            return user;
+        }
     }
 }

@@ -17,5 +17,7 @@ namespace NeuralPathways.Repository.Abstract
         Task<User> UserProfileUpdateAsync(User user);
 
         Task UserProfileDeleteByEmailAsync(string email);
+
+        Task<User> UserLoginAsync(string userEmail, string userPassword);
     }
 }

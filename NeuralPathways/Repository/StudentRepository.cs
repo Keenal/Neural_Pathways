@@ -21,8 +21,11 @@ namespace NeuralPathways.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Quiz>> GetStudentsAssignedQuizzesAsync()
         {
+            string loggedInUserId = loggedInUser.Id;
+
             //Initializes Parameters for Stored Procedure
             var parameters = new DynamicParameters();
+            parameters.Add("Id", loggedInUserId);
 
             return await JsonResultAsync<Quiz>("readStudentsAssignedQuizzes", parameters);
         }

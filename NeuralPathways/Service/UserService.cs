@@ -42,9 +42,9 @@ namespace NeuralPathways.Service
             await _userRepository.UserProfileDeleteByEmailAsync(email);
         }
 
-        public async Task<User> UserLoginAsync(User user)
+        public async Task<User> UserLoginAsync(string email, string password)
         {
-            return await _userRepository.GetUserByEmailAsync(user.Email);
+            return await _userRepository.UserLoginAsync(email, password);
         }
     }
 }
