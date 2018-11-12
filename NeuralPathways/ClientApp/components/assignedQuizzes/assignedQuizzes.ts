@@ -16,7 +16,6 @@ export default class ListOfAssignedQuizzes extends Vue {
         StudentService.GetStudentsAssignedQuizzes().then(result => {
             this.quizzes = result;
             this.isLoaded = true;
-
         });
     }
 

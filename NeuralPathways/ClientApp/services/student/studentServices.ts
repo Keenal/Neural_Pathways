@@ -27,15 +27,11 @@ export default class StudentService {
             StudentService.questions = result;
             StudentService.questionsIsLoaded = true;
         });
-        StudentService.populateQuestions();
-        window.location.href = '/displayQuestionStepOne';
 
-        //if (StudentService.questionsIsLoaded) {
-        //    StudentService.populateQuestions();
-        //    //alert(StudentService.question3.id);
-        //    StudentService.questionsIsLoaded = false;
-        //    window.location.href = '/displayQuestionStepOne';
-        //}
+        if (StudentService.questionsIsLoaded) {
+            StudentService.questionsIsLoaded = false;
+            window.location.href = '/displayQuestionStepOne';
+        }
     }
 
     public static GetQuestions(quiz: Quiz): Promise<Array<Question>> {
@@ -58,8 +54,8 @@ export default class StudentService {
         StudentService.question3 = StudentService.questions[2];
     }
 
-    public static getQuestionToDisplay() {
-
+    public static getQuestionToDisplay(): Array<Question> {
+        return this.questions;
     }
 }
 
