@@ -34,5 +34,20 @@ namespace NeuralPathways.Service
         {
             return await _studentRepository.GetQuestionsAsync(quiz);
         }
+
+        /// <summary>
+        /// sets the quiz and quiz questions that a student selects to take, and makes 
+        /// them readily available in a static instance.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<Quiz> StudentSelectQuizAsync(Quiz quiz)
+        {
+            return await _studentRepository.StudentSelectQuizAsync(quiz);
+        }
+
+        public Question GetRequestedQuestionSelectedQuiz()
+        {
+            return GetRequestedQuestionSelectedQuiz();
+        }
     }
 }

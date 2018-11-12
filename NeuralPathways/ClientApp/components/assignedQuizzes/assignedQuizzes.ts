@@ -21,7 +21,8 @@ export default class ListOfAssignedQuizzes extends Vue {
 
     selectQuizButtonFunction(id: string) {
         this.selectQuizByIdFromListOfQuizzes(id);
-        StudentService.GetStudentsSelectedQuiz(this.selectedQuiz);
+        StudentService.studentSelectQuiz(this.selectedQuiz);
+        window.location.href = '/displayQuestionStepOne';
     }
 
     selectQuizByIdFromListOfQuizzes(id: string) {

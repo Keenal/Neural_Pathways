@@ -7,16 +7,15 @@ import { Question } from '../../../models/Question';
 @Component
 export default class DisplayQuestionStepOne extends Vue {
 
-    questions: Array<Question> = [];
-    A: string = '7';
-    isLoaded: boolean = true;
+    question: Question = new Question();
+    A: string = this.question.questionVariableA;
+    isLoaded: boolean = false;
 
     mounted() {
-
-        this.questions = StudentService.getQuestionToDisplay();
-        alert(this.questions[0].questionVariableA);
-
-        this.isLoaded = true;
+        StudentService.GetRequestedQuestionSelectedQuiz().then(result => {
+            this.question = result;
+            this.isLoaded = true;
+        });
     }
 
     answerQuestionStepButtonFunction() {

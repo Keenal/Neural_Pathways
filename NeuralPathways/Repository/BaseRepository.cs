@@ -15,6 +15,10 @@ namespace NeuralPathways.Repository
         private IDbConnection Connection => new SqlConnection(_connection);
         private readonly string _connection;
         protected static User loggedInUser = new User();
+        protected static Quiz studentSelectedQuiz = new Quiz();
+        protected static Question selectedQuizQuestionOne = new Question();
+        protected static Question selectedQuizQuestionTwo = new Question();
+        protected static Question selectedQuizQuestionThree = new Question();
 
         //default constructor
         public BaseRepository(string connection)
