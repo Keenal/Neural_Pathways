@@ -1,21 +1,21 @@
 ﻿<template>
     <div class="displayQuestionStepOneCUI">
         <p class="displayQuestionStepOneCUIP">
-            No, we would not want to multiply both sides by B, this would actually move us a step in the wrong direction:
+            No, we would not want to multiply both sides by {{ B }}, this would actually move us a step in the wrong direction:
         </p>
         <p class="displayQuestionStepOneCUIP">
-            A * B = B (X - C) * B 		→	H = I (X - C)
+            {{ A }} * {{ B }} = {{ B }} (X - {{ C }}) * {{ B }} 		→	{{ H }} = {{ I }} (X - {{ C }})
         </p>
 
         <table class="displayQuestionStepOneCUITable">
             <tr>
                 <th>
-                    Instead we want to divide both sides by B. This will move us closer to having X alone on one side of the equation:
+                    Instead we want to divide both sides by {{ B }}. This will move us closer to having X alone on one side of the equation:
                 </th>
             </tr>
             <tr>
                 <th>
-                    A / B = (B (X - C)) / B 	→	F = (X - C)
+                    {{ A }} / {{ B }} = ({{ B }} (X - {{ C }})) / {{ B }} 	→	{{ F }} = (X - {{ C }})
                 </th>
             </tr>
             <tr>

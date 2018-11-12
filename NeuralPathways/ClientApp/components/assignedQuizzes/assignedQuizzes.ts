@@ -16,13 +16,13 @@ export default class ListOfAssignedQuizzes extends Vue {
         StudentService.GetStudentsAssignedQuizzes().then(result => {
             this.quizzes = result;
             this.isLoaded = true;
-
         });
     }
 
     selectQuizButtonFunction(id: string) {
         this.selectQuizByIdFromListOfQuizzes(id);
-        StudentService.GetStudentsSelectedQuiz(this.selectedQuiz);
+        StudentService.studentSelectQuiz(this.selectedQuiz);
+        window.location.href = '/displayQuestionStepOne';
     }
 
     selectQuizByIdFromListOfQuizzes(id: string) {

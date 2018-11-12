@@ -48,6 +48,36 @@ namespace NeuralPathways.Repository
 
             return await JsonResultAsync<Question>("readQuestionsByQuestionIds", parameters);
         }
-        
+
+        public async Task<Quiz> StudentSelectQuizAsync(Quiz quiz)
+        {
+            studentSelectedQuiz = quiz;
+            var questions = await GetQuestionsAsync(quiz);
+
+            var questionsList = questions.ToList();
+            selectedQuizQuestionOne = questions.ElementAt(0);
+            selectedQuizQuestionTwo = questions.ElementAt(1);
+            selectedQuizQuestionThree = questions.ElementAt(2);
+
+            return quiz;
+        }
+
+        public async Task<Question> GetRequestedQuestionSelectedQuiz()
+        {
+            return selectedQuizQuestionOne;
+
+            //if (questionNumber.Equals("1"))
+            //{
+            //    return selectedQuizQuestionOne;
+            //}
+            //else if (questionNumber.Equals("2"))
+            //{
+            //    return selectedQuizQuestionTwo;
+            //}
+            //else
+            //{
+            //    return selectedQuizQuestionThree;
+            //}
+        }
     }
 }

@@ -86,7 +86,7 @@ namespace NeuralPathways.Service
         public string PopulateQuestionVariableB()
         {
             Random random = new Random();
-            return random.Next(1, 10).ToString();
+            return random.Next(2, 10).ToString();
         }
 
         public string PopulateQuestionVariableA(string questionVariableB)
