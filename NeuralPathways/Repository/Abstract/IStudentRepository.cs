@@ -9,5 +9,7 @@ namespace NeuralPathways.Repository.Abstract
     public interface IStudentRepository
     {
         Task<IEnumerable<Quiz>> GetStudentsAssignedQuizzesAsync();
+
+        Task<IEnumerable<Question>> GetQuestionsAsync(Quiz quiz);
     }
 }
