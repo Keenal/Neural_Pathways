@@ -49,19 +49,6 @@ namespace NeuralPathways.Controllers
             return Ok(_userService.UserProfileDeleteByEmailAsync(email));
         }
 
-        //[HttpPost("login")]
-        //public async Task<IActionResult> UserLoginAsync([FromBody] User user)
-        //{
-        //    var result = await _userService.UserLoginAsync(user);
-
-        //    if (string.IsNullOrEmpty(result.Id) || user.Password != result.Password)
-        //    {
-        //        return BadRequest("Invalid Login");
-        //    }
-
-        //    return Ok(result);
-        //}
-
         [HttpPost("login")]
         public async Task<IActionResult> UserLoginAsync([FromBody] User user)
         {

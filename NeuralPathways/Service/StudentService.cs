@@ -25,5 +25,14 @@ namespace NeuralPathways.Service
         {
             return await _studentRepository.GetStudentsAssignedQuizzesAsync();
         }
+        
+        /// <summary>
+        /// Retreives a list of Questions by quizId
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<Question>> GetQuestionsAsync(Quiz quiz)
+        {
+            return await _studentRepository.GetQuestionsAsync(quiz);
+        }
     }
 }

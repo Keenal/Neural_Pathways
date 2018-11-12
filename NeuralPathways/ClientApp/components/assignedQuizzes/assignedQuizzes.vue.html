@@ -7,7 +7,9 @@
                 <div v-if="isLoaded">
                     <ul v-if="quizzes.length != 0">
                         <li v-for="quiz in quizzes">
-                            Quiz ID: {{ quiz.id }}
+                            <div id="selectQuizButton">
+                                <button class="selectQuizButton" @click="selectQuizButtonFunction(quiz.id)">Quiz # {{ quiz.id }}</button>
+                            </div>
                         </li>
                     </ul>
                     <ul v-else>
