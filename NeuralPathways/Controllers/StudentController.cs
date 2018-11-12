@@ -43,9 +43,10 @@ namespace NeuralPathways.Controllers
 
         [HttpGet("getRequestedQuestionSelectedQuiz")]
         [ProducesResponseType(typeof(Question), 200)]
-        public Question GetRequestedQuestionSelectedQuiz()
+        public async Task<IActionResult> GetRequestedQuestionSelectedQuiz()
         {
-            return _studentService.GetRequestedQuestionSelectedQuiz();
+            var returnThis = await _studentService.GetRequestedQuestionSelectedQuiz();
+            return Ok(returnThis);
         }
     }
 }

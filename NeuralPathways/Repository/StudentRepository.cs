@@ -62,7 +62,7 @@ namespace NeuralPathways.Repository
             return quiz;
         }
 
-        public Question GetRequestedQuestionSelectedQuiz()
+        public async Task<Question> GetRequestedQuestionSelectedQuiz()
         {
             return selectedQuizQuestionOne;
 

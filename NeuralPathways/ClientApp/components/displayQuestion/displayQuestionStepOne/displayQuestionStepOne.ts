@@ -8,13 +8,18 @@ import { Question } from '../../../models/Question';
 export default class DisplayQuestionStepOne extends Vue {
 
     question: Question = new Question();
-    A: string = this.question.questionVariableA;
+    A: string = '';
+    B: string = '';
+    C: string = '';
     isLoaded: boolean = false;
 
     mounted() {
         StudentService.GetRequestedQuestionSelectedQuiz().then(result => {
             this.question = result;
             this.isLoaded = true;
+            this.A = this.question.questionVariableA;
+            this.B = this.question.questionVariableB;
+            this.C = this.question.questionVariableC;
         });
     }
 

@@ -6,7 +6,7 @@
         <div v-if="isLoaded">
             <table class="displayQuestionStepOneUITable">
                 <tr>
-                    <th class="displayQuestionStepOneUIPTHTD">A = B (X - C)</th>
+                    <th class="displayQuestionStepOneUIPTHTD">{{ A }} = {{ B }} (X - {{ C }})</th>
                 </tr>
                 <tr>
                 <tr>
@@ -16,17 +16,17 @@
                 </tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerB' name="answer"> Add C to both sides</label>
+                        <label><input type="radio" id='answerB' name="answer"> Add {{ C }} to both sides</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerC' name="answer"> Multiply both sides by B</label>
+                        <label><input type="radio" id='answerC' name="answer"> Multiply both sides by {{ B }}</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerD' name="answer"> Divide both sides by B</label>
+                        <label><input type="radio" id='answerD' name="answer"> Divide both sides by {{ B }}</label>
                     </td>
                 </tr>
             </table>
