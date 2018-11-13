@@ -62,22 +62,22 @@ namespace NeuralPathways.Repository
             return quiz;
         }
 
-        public async Task<Question> GetRequestedQuestionSelectedQuiz()
+        public async Task<Question> GetRequestedQuestionSelectedQuiz(QuestionNumber questionNumber)
         {
-            return selectedQuizQuestionOne;
+            int convertedQuestionNumber = int.Parse(questionNumber.Number);
 
-            //if (questionNumber.Equals("1"))
-            //{
-            //    return selectedQuizQuestionOne;
-            //}
-            //else if (questionNumber.Equals("2"))
-            //{
-            //    return selectedQuizQuestionTwo;
-            //}
-            //else
-            //{
-            //    return selectedQuizQuestionThree;
-            //}
+            if (convertedQuestionNumber == 1)
+            {
+                return selectedQuizQuestionOne;
+            }
+            else if (convertedQuestionNumber == 2)
+            {
+                return selectedQuizQuestionTwo;
+            }
+            else
+            {
+                return selectedQuizQuestionThree;
+            }
         }
     }
 }

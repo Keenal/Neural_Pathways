@@ -20,6 +20,6 @@ export default class DisplayQuestionStepThreeB extends Vue {
     }
 
     nextStepButtonFunction() {
-        window.location.href = '/quizPage';
+        window.location.href = '/goToNextQuestion';
     }
 }
