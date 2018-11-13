@@ -1,42 +1,17 @@
 ﻿<template>
     <div class="quizUI">
-        <p class="quizUIP">Quiz</p>
+        <p class="quizUIP">Thats it, Quiz complete</p>
 
         <table class="quizUITable">
             <tr>
-                <th class="QuizUITableTHTD">Questions:</th>
-                <th class="QuizUITableTHTD">Scores:</th>
+                <th class="QuizUITableTHTD">Click when you are ready to submit:</th>
             </tr>
             <tr>
 
             <tr>
                 <td>
-                    <div id="QuestionOneButton">
-                        <button class="questionButton" @click="questionOneButtonFunction">Question 1</button>
-                    </div>
-                </td>
-                <td>
-
-                    <label>-</label>
-
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="QuestionTwoButton">
-                        <button class="questionButton" @click="questionTwoButtonFunction">Question 2</button>
-                    </div>
-                </td>
-                <td>
-
-                    <label>-</label>
-
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="QuestionThreeButton">
-                        <button class="questionButton" @click="questionThreeButtonFunction">Question 3</button>
+                    <div id="GoToNextQuestionButton">
+                        <button class="questionButton" @click="goToNextQuestionButtonFunction">Submit Quiz</button>
                     </div>
                 </td>
                 <td>
@@ -46,12 +21,6 @@
                 </td>
             </tr>
         </table>
-
-
-        <div id="completeQuizButton">
-            <button class="completeQuizButton" @click="completeQuizButtonFunction">Complete Quiz</button>
-        </div>
-
     </div>
 </template>
 
