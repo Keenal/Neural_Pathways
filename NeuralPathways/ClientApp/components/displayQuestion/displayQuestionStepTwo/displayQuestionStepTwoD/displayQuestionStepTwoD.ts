@@ -15,7 +15,7 @@ export default class DisplayQuestionStepTwoD extends Vue {
     isLoaded: boolean = false;
 
     mounted() {
-        StudentService.GetRequestedQuestionSelectedQuiz().then(result => {
+        StudentService.GetRequestedQuestionSelectedQuiz('1').then(result => {
             this.question = result;
             this.isLoaded = true;
             this.C = this.question.questionVariableC;

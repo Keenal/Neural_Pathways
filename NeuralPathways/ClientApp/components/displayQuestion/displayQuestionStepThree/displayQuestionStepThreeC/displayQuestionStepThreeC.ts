@@ -12,7 +12,7 @@ export default class DisplayQuestionStepThreeC extends Vue {
     isLoaded: boolean = false;
 
     mounted() {
-        StudentService.GetRequestedQuestionSelectedQuiz().then(result => {
+        StudentService.GetRequestedQuestionSelectedQuiz('1').then(result => {
             this.question = result;
             this.isLoaded = true;
             this.L = this.question.questionVariableL;
@@ -20,6 +20,6 @@ export default class DisplayQuestionStepThreeC extends Vue {
     }
 
     nextStepButtonFunction() {
-        window.location.href = '/quizPage';
+        window.location.href = '/goToQuestionTwo';
     }
 }
