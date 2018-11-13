@@ -79,5 +79,26 @@ namespace NeuralPathways.Repository
                 return selectedQuizQuestionThree;
             }
         }
+
+        public async Task<Question> AnswerQuestionAsync(Question question)
+        {
+            //Initializes Parameters for Stored Procedure
+            var parameters = new DynamicParameters();
+            parameters.Add("Id", question.Id);
+            if (question.StepOneAnswer != null)
+            {
+                parameters.Add("StepOneAnswer", question.StepOneAnswer);
+            }
+            if (question.StepTwoAnswer != null)
+            {
+                parameters.Add("StepTwoAnswer", question.StepTwoAnswer);
+            }
+            if (question.StepThreeAnswer != null)
+            {
+                parameters.Add("StepThreeAnswer", question.StepThreeAnswer);
+            }
+
+            return await FirstJsonResultAsync<Question>("updateQuestionById", parameters);
+        }
     }
 }

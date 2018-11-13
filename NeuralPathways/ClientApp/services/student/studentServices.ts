@@ -46,6 +46,21 @@ export default class StudentService {
                 console.log(error);
             })
     }
+
+    public static answerQuestion(question: Question): Promise<Question> {
+        return axios.post('api/Student/answerQuestion', {
+            id: question.id,
+            stepOneAnswer: question.stepOneAnswer,
+            stepTwoAnswer: question.stepTwoAnswer,
+            stepThreeAnswer: question.stepThreeAnswer
+        })
+            .then(response => {
+                return response.data;
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 }
 
 
