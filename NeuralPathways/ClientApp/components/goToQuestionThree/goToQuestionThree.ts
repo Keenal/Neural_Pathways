@@ -7,6 +7,6 @@ import StudentService from '../../services/student/studentServices';
 export default class QuizPageComponent extends Vue {
 
     goToNextQuestionButtonFunction() {
-        StudentService.incrementQuestionCounter();
+        window.location.href = '/displayQuestionThreeStepOne';
     }
 }

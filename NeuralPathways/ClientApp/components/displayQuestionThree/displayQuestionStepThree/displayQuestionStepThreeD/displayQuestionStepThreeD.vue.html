@@ -1,0 +1,36 @@
+﻿<template>
+    <div class="displayQuestionStepThreeDUI">
+        <p class="displayQuestionStepThreeDUIP">
+            No, we would not want to subtract {{ L }} from both sides. This would actually take us a step in the wrong direction.
+        </p>
+        <p class="displayQuestionStepThreeDUIP">
+            {{ L }} - {{ L }} = X - {{ L }} 	→	0 =  X - {{ L }}
+        </p>
+
+        <table class="displayQuestionStepThreeDUITable">
+            <tr>
+                <th>
+                    The correct answer is “{{ L }} = X  is the final solution”.
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Rational: Once you have isolated the variable X to one side of the “=” sign, the equation is solved. Typically you will want to perform all possible mathematical operations and reduce. You can verify that {{ L }} = X has met both criteria.
+                </td>
+            </tr>
+        </table>
+
+        <div id="nextStepButton">
+            <button @click="nextStepButtonFunction">Complete Question</button>
+        </div>
+
+    </div>
+</template>
+
+<style src="./displayQuestionStepThreeD.css"></style>
+<script src="./displayQuestionStepThreeD.ts"></script>
