@@ -8,7 +8,6 @@ export default class StudentService {
     static questions: Array<Question> = [];
     static questionsIsLoaded = false;
     static questionCounter: number = 1;
-    static questionNumberString: string = StudentService.questionCounter.toString();
 
     public static GetStudentsAssignedQuizzes(): Promise<Array<Quiz>> {
         return axios.get('api/Student/getStudentsAssignedQuizzes')
@@ -38,13 +37,14 @@ export default class StudentService {
     }
 
     public static incrementQuestionCounter() {
-        if (this.questionCounter == 3) {
-            this.resetQuestionCounter;
+        if (StudentService.questionCounter == 3) {
+            StudentService.resetQuestionCounter;
             window.location.href = '/submitQuizPage';
         }
         else
         {
-            this.questionCounter++;
+            StudentService.questionCounter++;
+            alert(StudentService.questionCounter);
             window.location.href = '/displayQuestionStepOne';
         }
     }
@@ -55,7 +55,7 @@ export default class StudentService {
 
     public static GetRequestedQuestionSelectedQuiz(): Promise<Question> {
         return axios.post('api/Student/getRequestedQuestionSelectedQuiz', {
-            number: this.questionNumberString
+            number: StudentService.questionCounter.toString()
         })
             .then(response => {
                 return response.data;
