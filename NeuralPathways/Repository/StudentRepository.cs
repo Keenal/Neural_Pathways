@@ -54,10 +54,21 @@ namespace NeuralPathways.Repository
             studentSelectedQuiz = quiz;
             var questions = await GetQuestionsAsync(quiz);
 
-            var questionsList = questions.ToList();
-            selectedQuizQuestionOne = questions.ElementAt(0);
-            selectedQuizQuestionTwo = questions.ElementAt(1);
-            selectedQuizQuestionThree = questions.ElementAt(2);
+            foreach (Question question in questions)
+            {
+                if (question.Id == quiz.QuestionOneId)
+                {
+                    selectedQuizQuestionOne = question;
+                }
+                if (question.Id == quiz.QuestionTwoId)
+                {
+                    selectedQuizQuestionTwo = question;
+                }
+                if (question.Id == quiz.QuestionThreeId)
+                {
+                    selectedQuizQuestionThree = question;
+                }
+            }
 
             return quiz;
         }
@@ -85,18 +96,9 @@ namespace NeuralPathways.Repository
             //Initializes Parameters for Stored Procedure
             var parameters = new DynamicParameters();
             parameters.Add("Id", question.Id);
-            if (question.StepOneAnswer != null)
-            {
-                parameters.Add("StepOneAnswer", question.StepOneAnswer);
-            }
-            if (question.StepTwoAnswer != null)
-            {
-                parameters.Add("StepTwoAnswer", question.StepTwoAnswer);
-            }
-            if (question.StepThreeAnswer != null)
-            {
-                parameters.Add("StepThreeAnswer", question.StepThreeAnswer);
-            }
+            parameters.Add("StepOneAnswer", question.StepOneAnswer);
+            parameters.Add("StepTwoAnswer", question.StepTwoAnswer);
+            parameters.Add("StepThreeAnswer", question.StepThreeAnswer);
 
             return await FirstJsonResultAsync<Question>("updateQuestionById", parameters);
         }
