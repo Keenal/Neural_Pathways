@@ -16,6 +16,6 @@ namespace NeuralPathways.Service.Abstract
 
         Task<Question> GetRequestedQuestionSelectedQuiz(QuestionNumber questionNumber);
 
-        Task<Question> AnswerQuestionAsync(Question question);
+        Task AnswerQuestionAsync(Question question);
     }
 }

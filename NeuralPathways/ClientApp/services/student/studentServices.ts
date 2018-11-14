@@ -47,16 +47,13 @@ export default class StudentService {
             })
     }
 
-    public static answerQuestion(question: Question): Promise<Question> {
+    public static answerQuestion(question: Question) {
         return axios.post('api/Student/answerQuestion', {
             id: question.id,
             stepOneAnswer: question.stepOneAnswer,
             stepTwoAnswer: question.stepTwoAnswer,
             stepThreeAnswer: question.stepThreeAnswer
         })
-            .then(response => {
-                return response.data;
-            })
             .catch(error => {
                 console.log(error);
             })

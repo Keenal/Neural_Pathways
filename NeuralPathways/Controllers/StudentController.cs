@@ -49,9 +49,9 @@ namespace NeuralPathways.Controllers
         }
 
         [HttpPost("answerQuestion")]
-        public async Task<IActionResult> AnswerQuestionAsync([FromBody] Question question)
+        public async Task AnswerQuestionAsync([FromBody] Question question)
         {
-            return Ok(await _studentService.AnswerQuestionAsync(question));
+            await _studentService.AnswerQuestionAsync(question);
         }
     }
 }
