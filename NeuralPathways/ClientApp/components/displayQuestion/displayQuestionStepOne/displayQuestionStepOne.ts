@@ -25,15 +25,23 @@ export default class DisplayQuestionStepOne extends Vue {
 
     answerQuestionStepButtonFunction() {
         if ($('input[id=answerA]:checked').length > 0) {
+            this.question.stepOneAnswer = 'a';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionStepOneA';
         }
         if ($('input[id=answerB]:checked').length > 0) {
+            this.question.stepOneAnswer = 'b';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionStepOneB';
         }
         if ($('input[id=answerC]:checked').length > 0) {
+            this.question.stepOneAnswer = 'c';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionStepOneC';
         }
         if ($('input[id=answerD]:checked').length > 0) {
+            this.question.stepOneAnswer = 'd';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionStepOneD';
         }
     }

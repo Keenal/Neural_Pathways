@@ -47,5 +47,11 @@ namespace NeuralPathways.Controllers
             var question = await _studentService.GetRequestedQuestionSelectedQuiz(qn);
             return Ok(question);
         }
+
+        [HttpPost("answerQuestion")]
+        public async Task AnswerQuestionAsync([FromBody] Question question)
+        {
+            await _studentService.AnswerQuestionAsync(question);
+        }
     }
 }

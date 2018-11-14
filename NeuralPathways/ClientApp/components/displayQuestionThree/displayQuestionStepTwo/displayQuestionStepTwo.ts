@@ -27,15 +27,23 @@ export default class DisplayQuestionStepTwo extends Vue {
 
     answerQuestionStepButtonFunction() {
         if ($('input[id=answerA]:checked').length > 0) {
+            this.question.stepTwoAnswer = 'a';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionThreeStepTwoA';
         }
         if ($('input[id=answerB]:checked').length > 0) {
+            this.question.stepTwoAnswer = 'b';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionThreeStepTwoB';
         }
         if ($('input[id=answerC]:checked').length > 0) {
+            this.question.stepTwoAnswer = 'c';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionThreeStepTwoC';
         }
         if ($('input[id=answerD]:checked').length > 0) {
+            this.question.stepTwoAnswer = 'd';
+            StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionThreeStepTwoD';
         }
     }

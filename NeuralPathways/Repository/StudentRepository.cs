@@ -54,10 +54,21 @@ namespace NeuralPathways.Repository
             studentSelectedQuiz = quiz;
             var questions = await GetQuestionsAsync(quiz);
 
-            var questionsList = questions.ToList();
-            selectedQuizQuestionOne = questions.ElementAt(0);
-            selectedQuizQuestionTwo = questions.ElementAt(1);
-            selectedQuizQuestionThree = questions.ElementAt(2);
+            foreach (Question question in questions)
+            {
+                if (question.Id == quiz.QuestionOneId)
+                {
+                    selectedQuizQuestionOne = question;
+                }
+                if (question.Id == quiz.QuestionTwoId)
+                {
+                    selectedQuizQuestionTwo = question;
+                }
+                if (question.Id == quiz.QuestionThreeId)
+                {
+                    selectedQuizQuestionThree = question;
+                }
+            }
 
             return quiz;
         }
@@ -78,6 +89,37 @@ namespace NeuralPathways.Repository
             {
                 return selectedQuizQuestionThree;
             }
+        }
+
+        public async Task AnswerQuestionAsync(Question question)
+        {
+            if (selectedQuizQuestionOne.Id == question.Id)
+            {
+                selectedQuizQuestionOne.StepOneAnswer = question.StepOneAnswer;
+                selectedQuizQuestionOne.StepTwoAnswer = question.StepTwoAnswer;
+                selectedQuizQuestionOne.StepThreeAnswer = question.StepThreeAnswer;
+            }
+            if (selectedQuizQuestionTwo.Id == question.Id)
+            {
+                selectedQuizQuestionTwo.StepOneAnswer = question.StepOneAnswer;
+                selectedQuizQuestionTwo.StepTwoAnswer = question.StepTwoAnswer;
+                selectedQuizQuestionTwo.StepThreeAnswer = question.StepThreeAnswer;
+            }
+            if (selectedQuizQuestionThree.Id == question.Id)
+            {
+                selectedQuizQuestionThree.StepOneAnswer = question.StepOneAnswer;
+                selectedQuizQuestionThree.StepTwoAnswer = question.StepTwoAnswer;
+                selectedQuizQuestionThree.StepThreeAnswer = question.StepThreeAnswer;
+            }
+
+            //Initializes Parameters for Stored Procedure
+            var parameters = new DynamicParameters();
+            parameters.Add("Id", question.Id);
+            parameters.Add("StepOneAnswer", question.StepOneAnswer);
+            parameters.Add("StepTwoAnswer", question.StepTwoAnswer);
+            parameters.Add("StepThreeAnswer", question.StepThreeAnswer);
+
+            await FirstJsonResultAsync<Question>("updateQuestionById", parameters);
         }
     }
 }
