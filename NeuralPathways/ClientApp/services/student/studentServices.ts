@@ -58,6 +58,16 @@ export default class StudentService {
                 console.log(error);
             })
     }
+
+    public static gradeQuiz(): Promise<Quiz> {
+        return axios.get('api/Student/gradeQuiz')
+            .then(response => {
+                return response.data;
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 }
 
 
