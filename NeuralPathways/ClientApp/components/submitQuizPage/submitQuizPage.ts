@@ -8,12 +8,13 @@ import { Quiz } from '../../models/Quiz';
 export default class QuizPageComponent extends Vue {
 
     gradedQuiz = new Quiz();
+    isLoaded: boolean = false;
 
     goToNextQuestionButtonFunction() {
         StudentService.gradeQuiz().then(result => {
             this.gradedQuiz = result;
+            this.isLoaded = true;
         });
-        alert("Your score is: " + this.gradedQuiz.grade);
         window.location.href = '/assignedQuizzes';
     }
 }

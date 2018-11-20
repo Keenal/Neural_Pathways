@@ -19,7 +19,5 @@ namespace NeuralPathways.Repository.Abstract
         Task UserProfileDeleteByEmailAsync(string email);
 
         Task<User> UserLoginAsync(string userEmail, string userPassword);
-
-        Task<Quiz> GradeQuiz();
     }
 }

@@ -7,8 +7,11 @@
                 <div v-if="isLoaded">
                     <ul v-if="quizzes.length != 0">
                         <li v-for="quiz in quizzes">
-                            <div id="selectQuizButton">
+                            <div id="selectQuizButton" v-if="quiz.grade == null">
                                 <button class="selectQuizButton" @click="selectQuizButtonFunction(quiz.id)">Quiz # {{ quiz.id }}</button>
+                            </div>
+                            <div id="selectQuizButton" v-else>
+                                Quiz # {{ quiz.id }} has been completed with a grade of {{ quiz.grade }}.
                             </div>
                         </li>
                     </ul>
