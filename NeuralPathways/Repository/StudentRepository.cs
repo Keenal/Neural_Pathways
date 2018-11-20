@@ -121,5 +121,121 @@ namespace NeuralPathways.Repository
 
             await FirstJsonResultAsync<Question>("updateQuestionById", parameters);
         }
+
+        public async Task<Quiz> GradeQuizAsync()
+        {
+            var studentSelectedQuizId = studentSelectedQuiz.Id;
+            var quizGrade = 0;
+
+            var questionOneGrade = GradeQuestionOne();
+            var questionTwoGrade = GradeQuestionTwo();
+            var questionThreeGrade = GradeQuestionThree();
+
+            if ((questionOneGrade == 0) && (questionTwoGrade == 0) && (questionThreeGrade == 0))
+            {
+                quizGrade = 100;
+            }
+            else if ((questionOneGrade > 0) && (questionTwoGrade > 0) && (questionThreeGrade == 0))
+            {
+                quizGrade = 90;
+            }
+            else if ((questionOneGrade <= 1) && (questionTwoGrade <= 1) && (questionThreeGrade == 1))
+            {
+                quizGrade = 66;
+            }
+            else if ((questionOneGrade > 1) && (questionTwoGrade == 1) && (questionThreeGrade == 1))
+            {
+                quizGrade = 70;
+            }
+            else if ((questionOneGrade > 1) && (questionTwoGrade > 1) && (questionThreeGrade == 1))
+            {
+                quizGrade = 80;
+            }
+            else if ((questionOneGrade <= 2) && (questionTwoGrade <= 2) && (questionThreeGrade == 2))
+            {
+                quizGrade = 33;
+            }
+            else if ((questionOneGrade > 2) && (questionTwoGrade == 2) && (questionThreeGrade == 2))
+            {
+                quizGrade = 40;
+            }
+            else if ((questionOneGrade > 2) && (questionTwoGrade > 2) && (questionThreeGrade == 2))
+            {
+                quizGrade = 50;
+            }
+            else
+            {
+                quizGrade = 0;
+            }
+
+            var parameters = new DynamicParameters();
+            parameters.Add("Id", studentSelectedQuizId);
+            parameters.Add("Grade", quizGrade.ToString());
+
+            return await FirstJsonResultAsync<Quiz>("updateQuizGradeById", parameters);
+        }
+
+        public int GradeQuestionOne()
+        {
+            var numberOfStepsCorrect = 0;
+            var numberOfStepsWrong = 3;
+
+            if (selectedQuizQuestionOne.StepOneAnswer == selectedQuizQuestionOne.StepOneCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+            if (selectedQuizQuestionOne.StepTwoAnswer == selectedQuizQuestionOne.StepTwoCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+            if (selectedQuizQuestionOne.StepThreeAnswer == selectedQuizQuestionOne.StepThreeCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+
+            return (numberOfStepsWrong - numberOfStepsCorrect);
+        }
+
+        public int GradeQuestionTwo()
+        {
+            var numberOfStepsCorrect = 0;
+            var numberOfStepsWrong = 3;
+
+            if (selectedQuizQuestionTwo.StepOneAnswer == selectedQuizQuestionTwo.StepOneCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+            if (selectedQuizQuestionTwo.StepTwoAnswer == selectedQuizQuestionTwo.StepTwoCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+            if (selectedQuizQuestionTwo.StepThreeAnswer == selectedQuizQuestionTwo.StepThreeCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+
+            return (numberOfStepsWrong - numberOfStepsCorrect);
+        }
+
+        public int GradeQuestionThree()
+        {
+            var numberOfStepsCorrect = 0;
+            var numberOfStepsWrong = 3;
+
+            if (selectedQuizQuestionThree.StepOneAnswer == selectedQuizQuestionThree.StepOneCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+            if (selectedQuizQuestionThree.StepTwoAnswer == selectedQuizQuestionThree.StepTwoCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+            if (selectedQuizQuestionThree.StepThreeAnswer == selectedQuizQuestionThree.StepThreeCorrectAnswer)
+            {
+                numberOfStepsCorrect++;
+            }
+
+            return (numberOfStepsWrong - numberOfStepsCorrect);
+        }
     }
 }

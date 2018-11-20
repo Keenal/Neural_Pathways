@@ -54,5 +54,10 @@ namespace NeuralPathways.Service
         {
             await _studentRepository.AnswerQuestionAsync(question);
         }
+
+        public async Task<Quiz> GradeQuizAsync()
+        {
+            return await _studentRepository.GradeQuizAsync();
+        }
     }
 }
