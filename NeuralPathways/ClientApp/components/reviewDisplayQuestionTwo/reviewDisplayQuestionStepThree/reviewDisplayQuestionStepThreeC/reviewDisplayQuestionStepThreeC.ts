@@ -20,6 +20,6 @@ export default class DisplayQuestionStepThreeC extends Vue {
     }
 
     nextStepButtonFunction() {
-        window.location.href = '/goToQuestionThree';
+        window.location.href = '/reviewDisplayQuestionThreeStepOne';
     }
 }

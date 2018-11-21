@@ -11,29 +11,31 @@
                 <tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerA' name="answer"> Divide both sides by {{ A }}</label>
+                        <li>Divide both sides by {{ A }}</li>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerB' name="answer"> Add {{ C }} to both sides</label>
+                        <li> Add {{ C }} to both sides</li>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerC' name="answer"> Multiply both sides by {{ B }}</label>
+                        <li> Multiply both sides by {{ B }}</li>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label><input type="radio" id='answerD' name="answer"> Divide both sides by {{ B }}</label>
+                        <li> Divide both sides by {{ B }}</li>
                     </td>
                 </tr>
             </table>
 
+            
             <div id="answerQuestionStepButton">
-                <button @click="answerQuestionStepButtonFunction">Submit</button>
+                <button @click="answerQuestionStepButtonFunction">See answer</button>
             </div>
+            
 
         </div>
     </div>

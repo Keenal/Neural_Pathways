@@ -26,11 +26,13 @@ export default class DisplayQuestionStepTwo extends Vue {
     }
 
     answerQuestionStepButtonFunction() {
-        if ($('input[id=answerA]:checked').length > 0) {
+        
+       // if ($('input[id=answerA]:checked').length > 0) {
             this.question.stepTwoAnswer = 'a';
             StudentService.answerQuestion(this.question);
-            window.location.href = '/displayQuestionStepTwoA';
-        }
+            window.location.href = '/reviewDisplayQuestionStepTwoA';
+      //  }
+        /*
         if ($('input[id=answerB]:checked').length > 0) {
             this.question.stepTwoAnswer = 'b';
             StudentService.answerQuestion(this.question);
@@ -41,10 +43,12 @@ export default class DisplayQuestionStepTwo extends Vue {
             StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionStepTwoC';
         }
+        
         if ($('input[id=answerD]:checked').length > 0) {
             this.question.stepTwoAnswer = 'd';
             StudentService.answerQuestion(this.question);
             window.location.href = '/displayQuestionStepTwoD';
         }
+        */
     }
 }

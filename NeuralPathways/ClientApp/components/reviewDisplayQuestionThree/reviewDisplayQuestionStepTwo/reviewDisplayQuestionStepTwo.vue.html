@@ -11,28 +11,28 @@
             <tr>
             <tr>
                 <td>
-                    <label><input type="radio" id='answerA' name="answer"> Add {{ C }} to both sides</label>
+                    <li> Add {{ C }} to both sides</li>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label><input type="radio" id='answerB' name="answer"> Subtract {{ C }} from both sides</label>
+                    <li> Subtract {{ C }} from both sides</li>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label><input type="radio" id='answerC' name="answer"> Subtract X from both sides</label>
+                    <li> Subtract X from both sides</li>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label><input type="radio" id='answerD' name="answer"> Divide both sides by {{ F }}</label>
+                    <li> Divide both sides by {{ F }}</li>
                 </td>
             </tr>
         </table>
 
         <div id="answerQuestionStepButton">
-            <button @click="answerQuestionStepButtonFunction">Submit</button>
+            <button @click="answerQuestionStepButtonFunction">See answer</button>
         </div>
 
     </div>
