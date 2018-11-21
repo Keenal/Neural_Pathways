@@ -1,0 +1,37 @@
+﻿<template>
+    <div class="displayQuestionStepOneAUI">
+        <p class="displayQuestionStepOneAUIP">
+            No, we would not want to divide both sides by {{ A }}, this would actually move us a step in the wrong direction:
+        </p>
+        <p class="displayQuestionStepOneAUIP">
+            {{ A }} / {{ A }} = ({{ B }} (X - {{ C }})) / {{ A }} 	→	{{ D }} = (X - {{ C }}) / {{ E }}
+        </p>
+
+        <table class="displayQuestionStepOneAUITable">
+            <tr>
+                <th>
+                    Instead we want to divide both sides by {{ B }}. This will move us closer to having X alone on one side of the equation:
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    {{ A }} / {{ B }} = ({{ B }} (X - {{ C }})) / {{ B }} 	→	{{ F }} = (X - {{ C }})
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Rational: We are trying to isolate the variable X. This means we want X to be all by itself on one side of the equation. Each step should help peel a layer surrounding the X, and move it (all other numbers and variables) to the opposite side of the “=” sign.
+
+                </td>
+            </tr>
+        </table>
+
+        <div id="nextStepButton">
+            <button @click="nextStepButtonFunction">Next Step</button>
+        </div>
+
+    </div>
+</template>
+
+<style src="./reviewDisplayQuestionStepOneA.css"></style>
+<script src="./reviewDisplayQuestionStepOneA.ts"></script>

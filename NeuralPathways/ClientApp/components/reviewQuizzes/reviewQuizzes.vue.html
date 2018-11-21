@@ -6,17 +6,14 @@
             <v-flex class="assignedQuizzesListUI">
                 <div v-if="isLoaded">
                     <ul v-if="quizzes.length != 0">
-                        <li v-for="quiz in quizzes">
-                            <div id="selectQuizButton" v-if="quiz.grade != null">
+                        <li v-for="quiz in quizzes" v-if="quiz.grade != null">
+                            <div id="selectQuizButton" >
                                 <button class="selectQuizButton" @click="selectQuizButtonFunction(quiz.id)">Quiz # {{ quiz.id }}</button>
                             </div>
-                            <div id="selectQuizButton" v-else>
-                                </div>
-                            
-                            </li>
-                        </ul>
-                        <ul v-else>
-                            Sorry, you do not currently have any quizzes assigned.
+                        </li>
+                    </ul>
+                    <ul v-else>
+                        Sorry, you do not currently have any quizzes assigned.
                     </ul>
                 </div>
              </v-flex>
