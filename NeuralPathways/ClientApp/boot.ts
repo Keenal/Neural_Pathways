@@ -9,6 +9,7 @@ const routes = [
     { path: '/', component: require('./components/login/login.vue.html') },
     { path: '/signup', component: require('./components/signup/signup.vue.html') },
     { path: '/assignedQuizzes', component: require('./components/assignedQuizzes/assignedQuizzes.vue.html') },
+    { path: '/reviewQuizzes', component: require('./components/reviewQuizzes/reviewQuizzes.vue.html') },
     { path: '/adminmain', component: require('./components/adminmain/adminmain.vue.html') },
     { path: '/quizassign', component: require('./components/quizassign/quizassign.vue.html') },
     { path: '/reports', component: require('./components/reports/reports.vue.html') },
@@ -63,7 +64,62 @@ const routes = [
     { path: '/displayQuestionThreeStepThreeB', component: require('./components/displayQuestionThree/displayQuestionStepThree/displayQuestionStepThreeB/displayQuestionStepThreeB.vue.html') },
     { path: '/displayQuestionThreeStepThreeC', component: require('./components/displayQuestionThree/displayQuestionStepThree/displayQuestionStepThreeC/displayQuestionStepThreeC.vue.html') },
     { path: '/displayQuestionThreeStepThreeD', component: require('./components/displayQuestionThree/displayQuestionStepThree/displayQuestionStepThreeD/displayQuestionStepThreeD.vue.html') },
-    { path: '/submitQuizPage', component: require('./components/submitQuizPage/submitQuizPage.vue.html') }
+   
+    { path: '/submitQuizPage', component: require('./components/submitQuizPage/submitQuizPage.vue.html') },
+
+    /************************************************************************************************************************************************************************** */
+
+    { path: '/reviewDisplayQuestionStepOne', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOne.vue.html') },
+    { path: '/reviewDisplayQuestionStepOneA', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneA/reviewDisplayQuestionStepOneA.vue.html') },
+    { path: '/reviewDisplayQuestionStepOneB', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneB/reviewDisplayQuestionStepOneB.vue.html') },
+    { path: '/reviewDisplayQuestionStepOneC', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneC/reviewDisplayQuestionStepOneC.vue.html') },
+    { path: '/reviewDisplayQuestionStepOneD', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneD/reviewDisplayQuestionStepOneD.vue.html') },
+    { path: '/reviewDisplayQuestionStepTwo', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwo.vue.html') },
+    { path: '/reviewDisplayQuestionStepTwoA', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoA/reviewDisplayQuestionStepTwoA.vue.html') },
+    { path: '/reviewDisplayQuestionStepTwoB', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoB/reviewDisplayQuestionStepTwoB.vue.html') },
+    { path: '/reviewDisplayQuestionStepTwoC', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoC/reviewDisplayQuestionStepTwoC.vue.html') },
+    { path: '/reviewDisplayQuestionStepTwoD', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoD/reviewDisplayQuestionStepTwoD.vue.html') },
+    { path: '/reviewDisplayQuestionStepThree', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThree.vue.html') },
+    { path: '/reviewDisplayQuestionStepThreeA', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeA/reviewDisplayQuestionStepThreeA.vue.html') },
+    { path: '/reviewDisplayQuestionStepThreeB', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeB/reviewDisplayQuestionStepThreeB.vue.html') },
+    { path: '/reviewDisplayQuestionStepThreeC', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeC/reviewDisplayQuestionStepThreeC.vue.html') },
+    { path: '/reviewDisplayQuestionStepThreeD', component: require('./components/reviewDisplayQuestion/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeD/reviewDisplayQuestionStepThreeD.vue.html') },
+    { path: '/reviewGoToQuestionTwo', component: require('./components/goToQuestionTwo/goToQuestionTwo.vue.html') },
+
+    { path: '/reviewDisplayQuestionTwoStepOne', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOne.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepOneA', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneA/reviewDisplayQuestionStepOneA.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepOneB', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneB/reviewDisplayQuestionStepOneB.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepOneC', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneC/reviewDisplayQuestionStepOneC.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepOneD', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneD/reviewDisplayQuestionStepOneD.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepTwo', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwo.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepTwoA', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoA/reviewDisplayQuestionStepTwoA.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepTwoB', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoB/reviewDisplayQuestionStepTwoB.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepTwoC', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoC/reviewDisplayQuestionStepTwoC.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepTwoD', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoD/reviewDisplayQuestionStepTwoD.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepThree', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThree.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepThreeA', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeA/reviewDisplayQuestionStepThreeA.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepThreeB', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeB/reviewDisplayQuestionStepThreeB.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepThreeC', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeC/reviewDisplayQuestionStepThreeC.vue.html') },
+    { path: '/reviewDisplayQuestionTwoStepThreeD', component: require('./components/reviewDisplayQuestionTwo/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeD/reviewDisplayQuestionStepThreeD.vue.html') },
+    { path: '/reviewGoToQuestionThree', component: require('./components/goToQuestionThree/goToQuestionThree.vue.html') },
+
+    { path: '/reviewDisplayQuestionThreeStepOne', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOne.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepOneA', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneA/reviewDisplayQuestionStepOneA.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepOneB', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneB/reviewDisplayQuestionStepOneB.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepOneC', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneC/reviewDisplayQuestionStepOneC.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepOneD', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepOne/reviewDisplayQuestionStepOneD/reviewDisplayQuestionStepOneD.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepTwo', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwo.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepTwoA', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoA/reviewDisplayQuestionStepTwoA.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepTwoB', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoB/reviewDisplayQuestionStepTwoB.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepTwoC', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoC/reviewDisplayQuestionStepTwoC.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepTwoD', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepTwo/reviewDisplayQuestionStepTwoD/reviewDisplayQuestionStepTwoD.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepThree', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThree.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepThreeA', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeA/reviewDisplayQuestionStepThreeA.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepThreeB', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeB/reviewDisplayQuestionStepThreeB.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepThreeC', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeC/reviewDisplayQuestionStepThreeC.vue.html') },
+    { path: '/reviewDisplayQuestionThreeStepThreeD', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeD/reviewDisplayQuestionStepThreeD.vue.html') },
+
+
 ];
 
 new Vue({

@@ -1,0 +1,51 @@
+﻿<template>
+    <div class="displayQuestionStepThreeUI">
+        <p class="displayQuestionStepThreeUIP">
+            What is the third step in solving {{ A }} = {{ B }} (X - {{ C }}) for X?
+        </p>
+
+        <table class="displayQuestionStepThreeUITable">
+            <tr>
+                <th class="displayQuestionStepThreeUIPTHTD">The previous step got us {{ L }} = X</th>
+            </tr>
+            <tr>
+
+            <tr>
+                <td>
+
+                    <li> There is no solution</li>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <li> Subtract X from both sides</li>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <li> {{ L }} = X is the final solution</li>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <li> Subtract {{ L }} from both sides</li>
+
+                </td>
+            </tr>
+        </table>
+
+        <div id="answerQuestionStepButton">
+            <button @click="answerQuestionStepButtonFunction">See answer</button>
+        </div>
+
+    </div>
+</template>
+
+<style src="./reviewDisplayQuestionStepThree.css"></style>
+<script src="./reviewDisplayQuestionStepThree.ts"></script>

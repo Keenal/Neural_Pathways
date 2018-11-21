@@ -1,0 +1,50 @@
+﻿.quizUIP {
+    padding-top: 20px;
+    color: #007bff;
+    font-family: Georgia;
+    font-size: 2.5rem;
+}
+
+.quizUITable {
+    width: 100%;
+    color: #ff6a00;
+    padding: 15px;
+    text-align: left;
+}
+
+td, th {
+    padding: 15px;
+    text-align: left;
+}
+
+
+/* Set a style for all buttons */
+.completeQuizButton {
+    background-color: #ff6a00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    button:hover {
+        opacity: 2;
+    }
+
+.questionButton {
+    background-color: #ff6a00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 2;
+}
