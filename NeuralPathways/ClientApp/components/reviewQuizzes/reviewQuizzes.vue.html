@@ -1,0 +1,29 @@
+<template>
+    <div class="assignQuizzesUI">
+        <nav-menu></nav-menu>
+        <h1 class="assignedQuizzesTitle">Review quizzes you have taken:</h1>
+        <v-layout>
+            <v-flex class="assignedQuizzesListUI">
+                <div v-if="isLoaded">
+                    <ul v-if="quizzes.length != 0">
+                        <li v-for="quiz in quizzes">
+                            <div id="selectQuizButton" v-if="quiz.grade != null">
+                                <button class="selectQuizButton" @click="selectQuizButtonFunction(quiz.id)">Quiz # {{ quiz.id }}</button>
+                            </div>
+                            <div id="selectQuizButton" v-else>
+                                </div>
+                            
+                            </li>
+                        </ul>
+                        <ul v-else>
+                            Sorry, you do not currently have any quizzes assigned.
+                    </ul>
+                </div>
+             </v-flex>
+         </v-layout>
+    </div>
+</template>
+
+
+<style src="./reviewQuizzes.css"></style>
+<script src="./reviewQuizzes.ts"></script>

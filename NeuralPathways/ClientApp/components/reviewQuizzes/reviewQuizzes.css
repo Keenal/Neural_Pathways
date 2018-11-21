@@ -1,17 +1,17 @@
-﻿.assignedQuizzesTitle {
+.reviewQuizzesTitle {
     padding-top: 20px;
     color: #007bff;
     font-family: Georgia;
 }
 
-.assignedQuizzesUIP {
+.reviewQuizzesUIP {
     padding-top: 20px;
     color: #007bff;
     font-family: Georgia;
     font-size: 2.5rem;
 }
 
-.assignedQuizzesListUI {
+.reviewQuizzesListUI {
     width: 100%;
     color: #ff6a00;
     padding: 15px;

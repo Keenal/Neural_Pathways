@@ -9,6 +9,7 @@ const routes = [
     { path: '/', component: require('./components/login/login.vue.html') },
     { path: '/signup', component: require('./components/signup/signup.vue.html') },
     { path: '/assignedQuizzes', component: require('./components/assignedQuizzes/assignedQuizzes.vue.html') },
+    { path: '/reviewQuizzes', component: require('./components/reviewQuizzes/reviewQuizzes.vue.html') },
     { path: '/adminmain', component: require('./components/adminmain/adminmain.vue.html') },
     { path: '/quizassign', component: require('./components/quizassign/quizassign.vue.html') },
     { path: '/reports', component: require('./components/reports/reports.vue.html') },
