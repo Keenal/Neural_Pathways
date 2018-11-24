@@ -24,32 +24,59 @@ export default class SignUpComponent extends Vue {
             this.user.role = (<HTMLInputElement>document.getElementById("teacherRole")).value;
         }
 
+        //check user inputs
+        if(this.user.firstName.length != 0)
+        {
 
-        $.ajax({
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            type: "POST",
-            url: 'api/User/create',
-            data: JSON.stringify({
-                firstname: this.user.firstName,
-                lastname: this.user.lastName,
-                email: this.user.email,
-                password: this.user.password,
-                role: this.user.role
-            }),
-            dataType: 'json',
-            success: function (response) {
-                window.location.href = "/";
+            if(this.user.lastName.length != 0)
+            {
+               
+                if(this.user.email.length != 0)
+                {
+                    if(this.user.password.length != 0)
+                    {
 
-            },
-            error: function (response) {
-                alert("Login failed :(");
+                        $.ajax({
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            },
+                            type: "POST",
+                            url: 'api/User/create',
+                            data: JSON.stringify({
+                                firstname: this.user.firstName,
+                                lastname: this.user.lastName,
+                                email: this.user.email,
+                                password: this.user.password,
+                                role: this.user.role
+                            }),
+                            dataType: 'json',
+                            success: function (response) {
+                                window.location.href = "/";
+                
+                            },
+                            error: function (response) {
+                                alert("Login failed :(");
+                            }
+                
+                        });
+                
+                    }else{
+                        alert("Please enter your password");
+                    }
+
+                }else{
+                    alert("Please enter your email");
+                }
+            }else{
+
+                alert("Please enter your last name");
             }
+        }else{
+            alert("Please enter your first name");
+        }
 
-        });
-
+    
 
 
 
