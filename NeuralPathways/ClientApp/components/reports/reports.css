@@ -20,3 +20,38 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+#grades {
+    position: relative;
+    bottom: 270px;
+    left: 300px;
+    width: auto;
+}
+
+#gradeLabel {
+    position: relative;
+    color: dodgerblue;
+    bottom: 285px;
+    left: 320px;
+    font-size: 1.0em;
+}
+
+#txt {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: auto;
+}
+
+#lstItem {
+    position: relative;
+    bottom: 6px;
+    list-style-type: square;
+    color: darkorange;
+}
+
+
+
+
+
+
+
