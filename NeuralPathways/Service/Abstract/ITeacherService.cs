@@ -11,5 +11,7 @@ namespace NeuralPathways.Service.Abstract
         Task<IEnumerable<User>> ListOfStudentsGetAsync();
 
         Task<Quiz> AssignStudentQuizAsync(User user);
+
+        Task<IEnumerable<Quiz>> GetGradedQuizzesAsync();
     }
 }

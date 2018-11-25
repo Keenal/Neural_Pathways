@@ -15,5 +15,7 @@ namespace NeuralPathways.Repository.Abstract
         Task<Quiz> AssignStudentQuizAsync(Quiz quiz);
 
         Task<Question> MakeNewQuestionAsync(Question question);
+
+        Task<IEnumerable<Quiz>> GetGradedQuizzesAsync();
     }
 }

@@ -101,5 +101,10 @@ namespace NeuralPathways.Service
             Random random = new Random();
             return random.Next(1, 50).ToString();
         }
+
+        public async Task<IEnumerable<Quiz>> GetGradedQuizzesAsync()
+        {
+            return await _teacherRepository.GetGradedQuizzesAsync();
+        }
     }
 }
