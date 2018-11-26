@@ -49,10 +49,9 @@
 #txt {
     position: relative;
     color: black;
-    font-size: .8em;
+    font-size: .9em;
     bottom: 27px;
     left: 20px;
-    width: 140px;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
