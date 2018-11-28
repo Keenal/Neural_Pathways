@@ -1,11 +1,31 @@
 ﻿<template>
     <div class="viewClassStatsUI">
         <nav-menu></nav-menu>
-        <h1 class="viewClassStatsTitle">Statistics for the Class:</h1>
         <v-layout>
             <v-flex class="viewClassStatsUI">
                 <div v-if="isLoaded">
-                    The most missed step is: {{ reportInfo.mostMissedStep }}.
+                    <h3 class="viewClassStatsTitle">Statistics for the Class:</h3>
+                    <ul>
+                        The class average for this quiz was: {{ reportInfo.averageGrade }}%
+                    </ul>
+                    <ul>
+                        The highest grade was: {{ reportInfo.highestGrade }}%
+                    </ul>
+                    <ul>
+                        The loweset grade was: {{ reportInfo.lowestGrade }}%
+                    </ul>
+                    <h3 class="assignedQuizzesTitle">On this quiz, students had the most problems with:</h3>
+                    <ul>
+                        {{ getIssue() }}
+                    </ul>
+                    <h3 class="assignedQuizzesTitle">Additionally, students also had a few problems with:</h3>
+                    <ul>
+                        {{ getSecondIssue() }}
+                    </ul>
+                    <h3 class="assignedQuizzesTitle">On the bright side, students seemed to grasp the following really well:</h3>
+                    <ul>
+                        {{ getGraspedBest() }}
+                    </ul>
                 </div>
             </v-flex>
         </v-layout>
