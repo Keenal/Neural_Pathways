@@ -13,5 +13,7 @@ namespace NeuralPathways.Service.Abstract
         Task<Quiz> AssignStudentQuizAsync(User user);
 
         Task<IEnumerable<Quiz>> GetGradedQuizzesAsync();
+
+        Task<ReportInfo> GetReportInfoAsync();
     }
 }

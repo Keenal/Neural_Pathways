@@ -42,5 +42,13 @@ namespace NeuralPathways.Controllers
             var listOfStudentsGradedQuizzes = await _teacherService.GetGradedQuizzesAsync();
             return Ok(listOfStudentsGradedQuizzes);
         }
+
+        [HttpGet("getReportInfo")]
+        [ProducesResponseType(typeof(ReportInfo), 200)]
+        public async Task<IActionResult> GetReportInfoAsync()
+        {
+            var reportInfo = await _teacherService.GetReportInfoAsync();
+            return Ok(reportInfo);
+        }
     }
 }

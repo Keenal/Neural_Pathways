@@ -96,5 +96,13 @@ namespace NeuralPathways.Repository
 
             return await JsonResultAsync<Quiz>("readGradedQuizzes", parameters);
         }
+
+        public async Task<IEnumerable<Question>> GetGradedQuestionsAsync()
+        {
+            //Initializes Parameters for Stored Procedure
+            var parameters = new DynamicParameters();
+
+            return await JsonResultAsync<Question>("readCompletedQuestions", parameters);
+        }
     }
 }
