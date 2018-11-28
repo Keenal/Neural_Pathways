@@ -17,5 +17,7 @@ namespace NeuralPathways.Repository.Abstract
         Task<Question> MakeNewQuestionAsync(Question question);
 
         Task<IEnumerable<Quiz>> GetGradedQuizzesAsync();
+
+        Task<IEnumerable<Question>> GetGradedQuestionsAsync();
     }
 }

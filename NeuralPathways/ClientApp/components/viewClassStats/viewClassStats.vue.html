@@ -1,0 +1,16 @@
+﻿<template>
+    <div class="viewClassStatsUI">
+        <nav-menu></nav-menu>
+        <h1 class="viewClassStatsTitle">Statistics for the Class:</h1>
+        <v-layout>
+            <v-flex class="viewClassStatsUI">
+                <div v-if="isLoaded">
+                    The most missed step is: {{ reportInfo.mostMissedStep }}.
+                </div>
+            </v-flex>
+        </v-layout>
+    </div>
+</template>
+
+<style src="./viewClassStats.css"></style>
+<script src="./viewClassStats.ts"></script>
