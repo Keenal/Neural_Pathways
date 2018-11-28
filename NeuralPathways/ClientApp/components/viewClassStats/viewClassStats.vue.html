@@ -18,6 +18,14 @@
                     <ul>
                         {{ getIssue() }}
                     </ul>
+                    <h3 class="assignedQuizzesTitle">Additionally, students also had a few problems with:</h3>
+                    <ul>
+                        {{ getSecondIssue() }}
+                    </ul>
+                    <h3 class="assignedQuizzesTitle">On the bright side, students seemed to grasp the following really well:</h3>
+                    <ul>
+                        {{ getGraspedBest() }}
+                    </ul>
                 </div>
             </v-flex>
         </v-layout>
