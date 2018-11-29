@@ -120,6 +120,23 @@ const routes = [
     { path: '/reviewDisplayQuestionThreeStepThreeC', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeC/reviewDisplayQuestionStepThreeC.vue.html') },
     { path: '/reviewDisplayQuestionThreeStepThreeD', component: require('./components/reviewDisplayQuestionThree/reviewDisplayQuestionStepThree/reviewDisplayQuestionStepThreeD/reviewDisplayQuestionStepThreeD.vue.html') },
 
+    /********************************************************************************************************************************************************************************************************************************/
+
+    { path: '/displayQuestionStepOneExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepOne/displayQuestionStepOne.vue.html') },
+    { path: '/displayQuestionStepOneAExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepOne/displayQuestionStepOneA/displayQuestionStepOneA.vue.html') },
+    { path: '/displayQuestionStepOneBExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepOne/displayQuestionStepOneB/displayQuestionStepOneB.vue.html') },
+    { path: '/displayQuestionStepOneCExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepOne/displayQuestionStepOneC/displayQuestionStepOneC.vue.html') },
+    { path: '/displayQuestionStepOneDExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepOne/displayQuestionStepOneD/displayQuestionStepOneD.vue.html') },
+    { path: '/displayQuestionStepTwoExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwo.vue.html') },
+    { path: '/displayQuestionStepTwoAExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoA/displayQuestionStepTwoA.vue.html') },
+    { path: '/displayQuestionStepTwoBExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoB/displayQuestionStepTwoB.vue.html') },
+    { path: '/displayQuestionStepTwoCExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoC/displayQuestionStepTwoC.vue.html') },
+    { path: '/displayQuestionStepTwoDExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepTwo/displayQuestionStepTwoD/displayQuestionStepTwoD.vue.html') },
+    { path: '/displayQuestionStepThreeExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepThree/displayQuestionStepThree.vue.html') },
+    { path: '/displayQuestionStepThreeAExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeA/displayQuestionStepThreeA.vue.html') },
+    { path: '/displayQuestionStepThreeBExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeB/displayQuestionStepThreeB.vue.html') },
+    { path: '/displayQuestionStepThreeCExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeC/displayQuestionStepThreeC.vue.html') },
+    { path: '/displayQuestionStepThreeDExample', component: require('./components/teacherExampleQuiz/displayQuestion/displayQuestionStepThree/displayQuestionStepThreeD/displayQuestionStepThreeD.vue.html') },
 
 ];
 

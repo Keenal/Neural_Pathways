@@ -1,0 +1,43 @@
+﻿<template>
+    <div class="displayQuestionStepOneUI">
+        <p class="displayQuestionStepOneUIP">
+            What is the first step in solving this linear equation for X?
+        </p>
+        <div v-if="isLoaded">
+            <table class="displayQuestionStepOneUITable">
+                <tr>
+                    <th class="displayQuestionStepOneUIPTHTD">8 = 2 (X - 5)</th>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" id='answerA' name="answer"> Divide both sides by 8</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" id='answerB' name="answer"> Add 5 to both sides</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" id='answerC' name="answer"> Multiply both sides by 2</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" id='answerD' name="answer"> Divide both sides by 2</label>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="answerQuestionStepButton">
+                <button @click="answerQuestionStepButtonFunction">Go to Answer A</button>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<style src="./displayQuestionStepOne.css"></style>
+<script src="./displayQuestionStepOne.ts"></script>

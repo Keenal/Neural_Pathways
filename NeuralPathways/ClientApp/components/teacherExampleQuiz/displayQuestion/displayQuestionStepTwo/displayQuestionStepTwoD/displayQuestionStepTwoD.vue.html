@@ -1,0 +1,36 @@
+﻿<template>
+    <div class="displayQuestionStepTwoDUI">
+        <p class="displayQuestionStepTwoDUIP">
+            No, we would not want to divide both sides by {{ F }}, this would actually move us a step in the wrong direction:
+        </p>
+        <p class="displayQuestionStepTwoDUIP">
+            {{ F }} / {{ F }} = (X - {{ C }}) / {{ F }}  		→	{{ M }} = (X - {{ C }}) / {{ F }}
+        </p>
+
+        <table class="displayQuestionStepTwoDUITable">
+            <tr>
+                <th>
+                    Instead we want to add {{ C }} to both sides. This will accomplish the goal of having  X alone on one side of the equation:
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    {{ F }} + {{ C }} = X - {{ C }} + {{ C }} 	→	{{ L }} = X
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Rational: We are trying to isolate the variable X. This means we want X to be all by itself on one side of the equation. By dividing both sides by {{ F }} we are actually adding another step we must accomplish before isolating the X.
+                </td>
+            </tr>
+        </table>
+
+        <div id="nextStepButton">
+            <button @click="nextStepButtonFunction">Go to Step 3</button>
+        </div>
+
+    </div>
+</template>
+
+<style src="./displayQuestionStepTwoD.css"></style>
+<script src="./displayQuestionStepTwoD.ts"></script>
