@@ -22,6 +22,10 @@ export default class ListOfAssignedQuizzes extends Vue {
         });
     }
 
+    returnToAdminButtonFunction() {
+        window.location.href = '/adminmain';
+    }
+
     getIssue(): string {
         if (this.reportInfo.mostMissedStep == '1') { //correct answer is d
             this.mostIssues = 'Given "8 = 2(X-5)", which was the very first step, students seem to not fully be grasping how to get rid of a constant like "2" using division. ';
