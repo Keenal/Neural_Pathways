@@ -2,6 +2,7 @@
 import { Component } from 'vue-property-decorator';
 import $ from 'jquery';
 import { User } from '../../models/user';
+import * as Cookies from 'es-cookie';
 
 @Component
 export default class LoginComponent extends Vue {
@@ -31,7 +32,7 @@ export default class LoginComponent extends Vue {
                 }),
                 dataType: 'json',
                 success: function (response) {
-    
+                    
                     //if (response.role = 'student')
                     //{
                     //    window.location.href = "/quiz";
@@ -40,9 +41,13 @@ export default class LoginComponent extends Vue {
                     //if (response.role = 'teacher') {
                     //    window.location.href = "/adminmain";
                     //}
-    
-                    window.location.href = "/quiz";
-                    
+                    console.log(response);
+                    Cookies.set('role', response.role);
+                    if(response.role === 'teacher') {
+                        window.location.href = "/adminmain";
+                    } else {
+                        window.location.href = "/quiz";
+                    }
     
                 },
                 error: function (response) {
