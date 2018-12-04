@@ -46,7 +46,7 @@ export default class LoginComponent extends Vue {
                     if(response.role === 'teacher') {
                         window.location.href = "/adminmain";
                     } else {
-                        window.location.href = "/quiz";
+                        window.location.href = "/home";
                     }
     
                 },

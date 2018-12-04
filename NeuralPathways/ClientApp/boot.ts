@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 
 const routes = [
     { path: '/', component: require('./components/login/login.vue.html') },
+    { path: '/home', component: require('./components/home/home.vue.html') },
     { path: '/signup', component: require('./components/signup/signup.vue.html') },
     { path: '/assignedQuizzes', component: require('./components/assignedQuizzes/assignedQuizzes.vue.html') },
     { path: '/reviewQuizzes', component: require('./components/reviewQuizzes/reviewQuizzes.vue.html') },
