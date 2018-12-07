@@ -9,6 +9,5 @@ export default class LogOut extends Vue {
     mounted() {
         console.log("LOGGING OUT");
         Cookies.remove('role');
-       // window.location.href = "/";
     }
 }

@@ -26,21 +26,10 @@ export default class LoginComponent extends Vue {
                 type: 'POST',
                 data: JSON.stringify({
                     email: this.user.email,
-                    password: this.user.password,
-                   // role: this.user.role
-    
+                    password: this.user.password,    
                 }),
                 dataType: 'json',
                 success: function (response) {
-                    
-                    //if (response.role = 'student')
-                    //{
-                    //    window.location.href = "/quiz";
-                    //}
-    
-                    //if (response.role = 'teacher') {
-                    //    window.location.href = "/adminmain";
-                    //}
                     console.log(response);
                     Cookies.set('role', response.role);
                     if(response.role === 'teacher') {
@@ -48,7 +37,6 @@ export default class LoginComponent extends Vue {
                     } else {
                         window.location.href = "/home";
                     }
-    
                 },
                 error: function (response) {
                     alert("Login failed :(");
@@ -59,9 +47,5 @@ export default class LoginComponent extends Vue {
         }else{
             alert("Please check your username or password");
         }
-
     }
-
-  
-
 }
