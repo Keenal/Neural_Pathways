@@ -50,20 +50,5 @@ namespace NeuralPathwaysTests
             //ASSERT
             _userRepositoryMock.Verify((_userRepositoryMock => _userRepositoryMock.UserProfileCreateAsync(user)), Times.Once);
         }
-
-        //[TestMethod]
-        //public async Task UserLoginByEmailAndPassword_ShouldLetTheUserLogin()
-        //{
-        //    //ARRANGE
-        //    string email = user.Email;
-        //    string password = user.Password;
-        //    _userRepositoryMock.Setup(_userRepositoryMock => _userRepositoryMock.GetUserByEmailAsync(user.Email)).Returns(Task.FromResult(user));
-
-        //    //ACT
-        //    var retrievedUser = await _sut.UserLoginAsync(user);
-
-        //    //ASSERT
-        //    Assert.AreEqual(user.Email, retrievedUser.Email);
-        //}
     }
 }
