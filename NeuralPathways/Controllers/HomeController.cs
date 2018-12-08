@@ -12,10 +12,6 @@ namespace NeuralPathways.Controllers
     {
         public IActionResult Index()
         {
-            //BaseRepository test = new BaseRepository();
-
-            //test.TestConnection();
-
             return View();
         }
 

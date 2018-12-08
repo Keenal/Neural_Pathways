@@ -8,12 +8,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\components\assignedQuizzes\assignedQuizzes.ts" />
+    <None Remove="ClientApp\components\viewClassStats\viewClassStats.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\wwwroot\dist\549b73dc18feecec5b448e6dc3da586c.jpg" />
+    <Content Include="ClientApp\wwwroot\dist\d1c3c1d2f5f59c5bdd976d913e373b6c.png" />
+    <Content Include="ClientApp\wwwroot\dist\main.js" />
+    <Content Include="ClientApp\wwwroot\dist\main.js.map" />
+    <Content Include="ClientApp\wwwroot\dist\vendor.css" />
+    <Content Include="ClientApp\wwwroot\dist\vendor.js" />
+    <Content Include="ClientApp\wwwroot\favicon.ico" />
+    <Content Include="ClientApp\wwwroot\images\bg.jpg" />
+    <Content Include="ClientApp\wwwroot\images\loginIcon.png" />
+    <Content Include="ClientApp\wwwroot\images\logo.png" />
+    <Content Include="ClientApp\wwwroot\images\quizIcon.png" />
+    <Content Include="ClientApp\wwwroot\images\signupIcon.png" />
+    <Content Include="ClientApp\wwwroot\images\Welcome.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="1.50.5" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\assignedQuizzes\assignedQuizzes.ts" />
+    <TypeScriptCompile Include="ClientApp\components\viewClassStats\viewClassStats.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
@@ -38,7 +65,7 @@
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
-      <DistFiles Include="wwwroot\dist\**" />
+      <DistFiles Include="ClientApp\wwwroot\dist\**" />
       <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

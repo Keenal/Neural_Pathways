@@ -1,0 +1,44 @@
+#wel {
+    text-align: center;
+    color: steelblue;
+    position: relative;
+}
+
+#im1 {
+    position: relative;
+    bottom: 65px;
+    max-height: 800px;
+    max-width: 470px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote {
+    position: relative;
+    text-align: center;
+    bottom: 50px;
+}
+
+footer {
+    color: darkorange;
+}
+
+#admin {
+    text-align: center;
+    font-size: 1.8em;
+    position: relative;
+}
+
+#list1 {
+    position: relative;
+    right: -100px;
+}
+
+#qa {
+    color: darkorange;
+}
+
+#rep {
+    color: darkorange;
+}

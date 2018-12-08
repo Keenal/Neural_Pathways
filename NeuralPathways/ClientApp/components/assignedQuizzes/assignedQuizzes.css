@@ -1,0 +1,47 @@
+﻿.assignedQuizzesTitle {
+    padding-top: 20px;
+    color: #007bff;
+    font-family: Georgia;
+}
+
+.assignedQuizzesUIP {
+    padding-top: 20px;
+    color: #007bff;
+    font-family: Georgia;
+    font-size: 2.5rem;
+}
+
+.assignedQuizzesListUI {
+    width: 100%;
+    color: #ff6a00;
+    padding: 15px;
+    text-align: left;
+}
+
+
+
+td, th {
+    padding: 15px;
+    text-align: left;
+
+}
+
+#takeQuizButton {
+    display: flex;
+    align-items: center;
+}
+
+.selectQuizButton {
+    background-color: #ff6a00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 2;
+}

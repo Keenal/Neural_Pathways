@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NeuralPathways.Repository;
+using NeuralPathways.Repository.Abstract;
+using NeuralPathways.Service;
+using NeuralPathways.Service.Abstract;
 
 namespace NeuralPathways
 {
@@ -23,9 +27,17 @@ namespace NeuralPathways
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddSingleton<IUserService, UserService>();
-            //services.AddSingleton<IUserRepository>(provider =>
-            //    new UserRepository(Configuration.GetConnectionString("tma")));
+            services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IUserRepository>(provider =>
+                new UserRepository(Configuration.GetConnectionString("tma")));
+
+            services.AddSingleton<ITeacherService, TeacherService>();
+            services.AddSingleton<ITeacherRepository>(provider =>
+                new TeacherRepository(Configuration.GetConnectionString("tma")));
+
+            services.AddSingleton<IStudentService, StudentService>();
+            services.AddSingleton<IStudentRepository>(provider =>
+                new StudentRepository(Configuration.GetConnectionString("tma")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

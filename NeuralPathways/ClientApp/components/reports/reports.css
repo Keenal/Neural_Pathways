@@ -1,0 +1,71 @@
+﻿#list3 {
+    position: relative;
+    left: 50px;
+    bottom: 135px;
+    width: 150px;
+}
+
+#reports {
+    text-align: center;
+    position: relative;
+    bottom: 55px;
+    color: white;
+}
+
+#img3 {
+    position: relative;
+    bottom: 90px;
+    left: 30px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grades {
+    position: relative;
+    bottom: 270px;
+    left: 300px;
+    width: auto;
+}
+
+#gradeLabel {
+    position: relative;
+    color: dodgerblue;
+    bottom: 285px;
+    left: 320px;
+    font-size: 1.0em;
+}
+
+#txt {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: auto;
+}
+
+#lstItem {
+    position: relative;
+    bottom: 6px;
+    list-style-type: square;
+    color: darkorange;
+}
+
+.selectQuizButton {
+    background-color: #ff6a00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 2;
+}
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+﻿.displayQuestionStepThreeCUIP {
+    padding-top: 20px;
+    color: #007bff;
+    font-family: Georgia;
+    font-size: 1.5rem;
+}
+
+.displayQuestionStepThreeCUITable {
+    width: 100%;
+    color: #ff6a00;
+    padding: 15px;
+    text-align: left;
+}
+
+td, th {
+    text-align: left;
+}
+
+#nextStepButton {
+    display: flex;
+    align-items: center;
+}

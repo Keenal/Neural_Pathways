@@ -1,0 +1,29 @@
+﻿<template>
+    <div class="loginUI">
+        <a href="/adminmain"> <strong>Admin</strong></a>
+        <h1 class="loginTitle">Log In!</h1><br />
+
+        <strong>
+            <p class="loginP">
+                Email:<br />
+                <input class="loginInput" type="email" name="femail" id="userEmail"><br>
+
+
+                Password:
+                <input class="loginInput" type="password" name="fpassword" id="userPassword"><br>
+            </p>
+
+            <button class="loginButton" @click="loginButtonFunction">Login</button>
+        </strong>
+
+        <p class="loginP">
+            Don't have an account? Sign up
+            <a href="/signup"> <strong>here!</strong></a>
+
+            <br /><br />
+        </p>
+    </div>
+</template>
+
+<style src="./login.css"></style>
+<script src="./login.ts"></script>

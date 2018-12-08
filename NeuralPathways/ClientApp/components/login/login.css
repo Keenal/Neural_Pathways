@@ -1,0 +1,52 @@
+﻿* {
+    box-sizing: border-box
+}
+
+
+/* Full-width input fields */
+.loginInput[type=text], .loginInput[type=password], .loginInput[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+    .loginInput[type=text]:focus, .loginInput[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.loginButton {
+    background-color: #ff6a00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    button:hover {
+        opacity: 2;
+    }
+
+.loginTitle {
+    padding-top: 20px;
+    color: #007bff;
+    font-family: Georgia;
+}
+.loginP {
+color: white;
+}
+    
+

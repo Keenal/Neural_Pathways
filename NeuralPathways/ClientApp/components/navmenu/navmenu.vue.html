@@ -1,37 +1,13 @@
-<template>
-    <div class="main-nav">
-        <div class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">NeuralPathways</a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <router-link to="/" :exact="true">
-                            <span class="glyphicon glyphicon-home"></span> Home
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/counter">
-                            <span class="glyphicon glyphicon-education"></span> Counter
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/fetchdata">
-                            <span class="glyphicon glyphicon-th-list"></span> Fetch data
-                        </router-link>
-                    </li>
-                </ul>
-            </div>
-        </div>
+﻿<template>
+    <div>
+        <ul id="ul">
+            <li id="li"><a href="/"><img src="../../../wwwroot/images/loginIcon.png"><br />Login</a></li>
+            <li id="li"><a href="/assignedQuizzes"><img src="../../../wwwroot/images/quizIcon.png"><br />Take a quiz</a></li>
+            <li id="li"><a href="/reviewQuizzes"><img src="../../../wwwroot/images/reviewIcon.png"><br />Review quizzes</a></li>
+            <li id="li"><a href="/" @click="logOut"><img src="../../../wwwroot/images/loginIcon.png" style="transform:rotate(180deg)"><br />Logout</a></li>
+        </ul>
     </div>
 </template>
 
-<style src="./navmenu.css" />
+<style src="./navmenu.css" ></style>
+<script src="./navmenu.ts"></script>

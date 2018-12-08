@@ -6,38 +6,25 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
+using NeuralPathways.Models;
 
 namespace NeuralPathways.Repository
 {
     public class BaseRepository
     {
         private IDbConnection Connection => new SqlConnection(_connection);
-
         private readonly string _connection;
+        protected static User loggedInUser = new User();
+        protected static Quiz studentSelectedQuiz = new Quiz();
+        protected static Question selectedQuizQuestionOne = new Question();
+        protected static Question selectedQuizQuestionTwo = new Question();
+        protected static Question selectedQuizQuestionThree = new Question();
 
         //default constructor
         public BaseRepository(string connection)
         {
             _connection = connection;
         }
-
-        //public BaseRepository()
-        //{
-        //    _connection = "Server=tcp:tma.database.windows.net,1433;Initial Catalog=TMA;Persist Security Info=False;User ID=tmadev;Password=!qa@ws3ed;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        //}
-
-        //test connection
-
-        //public async Task TestConnection()
-        //{
-        //    using (IDbConnection conn = Connection)
-        //    {
-        //        string query = "SELECT * FROM USERS";
-        //        conn.Open();
-        //        var result = await conn.QueryAsync<String>(query);
-        //    }
-        //}
-
 
         /// <summary>
         /// executes the commands
@@ -65,15 +52,7 @@ namespace NeuralPathways.Repository
         /// <returns></returns>
         protected async Task<IEnumerable<T>> JsonResultAsync<T>(string procedureName, DynamicParameters parameters = null)
         {
-            using (var connection = Connection)
-            {
-                connection.Open();
-
-                return await connection.QueryAsync<T>(
-                    procedureName,
-                    parameters,
-                    commandType: CommandType.StoredProcedure).ConfigureAwait(false);
-            }
+            return JsonConvert.DeserializeObject<IEnumerable<T>>(await JsonResultAsync(procedureName, parameters));
         }
 
         /// <summary>

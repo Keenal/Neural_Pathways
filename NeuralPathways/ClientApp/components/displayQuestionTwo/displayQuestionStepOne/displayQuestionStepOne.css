@@ -1,0 +1,23 @@
+﻿.displayQuestionStepOneUIP {
+    padding-top: 20px;
+    color: #007bff;
+    font-family: Georgia;
+    font-size: 1.5rem;
+}
+
+.displayQuestionStepOneUITable {
+    width: 100%;
+    color: #ff6a00;
+    padding: 15px;
+    text-align: left;
+}
+
+td, th {
+    padding: 15px;
+    text-align: left;
+}
+
+#answerQuestionStepButton {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,5 @@
+language: csharp
+solution: NeuralPathways.sln
+mono: none
+dotnet: 2.1.402
+script: csharp '../NeuralPathwaysTests/TeacherRepositoryTests.cs'
